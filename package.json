@@ -1,0 +1,38 @@
+{
+  "id" : "netuitive.packages.linux",
+  "version" : "1.0.0",
+  "manifest" : {
+    "name" : "Netuitive Packages Linux",
+    "description" : "A set of Netuitive analytics configurations, polices, dashboards and reports that are used to monitor Linux performance",
+    "author" : {
+      "name" : null,
+      "email" : null
+    },
+    "distro" : {
+      "logo" : "http://assets.app.netuitive.com/pkg/logo/netuitive/banner_logo.png",
+      "download" : null
+    },
+    "compatibility" : [ "DIAMOND", "INFRASTRUCTURE" ],
+    "tags" : [ ],
+    "checksum" : null
+  },
+  "policies" : [ {
+    "data" : {
+      "file" : "policies/elevated.user.cpu.json",
+      "encoding" : "application/json",
+      "content" : null
+    }
+  }, {
+    "data" : {
+      "file" : "policies/elevated.system.cpu.json",
+      "encoding" : "application/json",
+      "content" : null
+    }
+  }, {
+    "data" : {
+      "file" : "policies/elevated.memory.usage.(diamond).json",
+      "encoding" : "application/json",
+      "content" : null
+    }
+  } ]
+}

@@ -1,0 +1,35 @@
+{
+  "policy" : {
+    "id" : null,
+    "name" : "Elevated User CPU",
+    "description" : null,
+    "scope" : {
+      "elementName" : "",
+      "elementType" : "SERVER",
+      "elementTags" : { }
+    },
+    "duration" : 1800,
+    "conditions" : [ {
+      "metric" : "cpu.total.user",
+      "wildcard" : null,
+      "analytic" : "baselineDeviation",
+      "operator" : ">",
+      "level" : null
+    }, {
+      "metric" : "cpu.total.user",
+      "wildcard" : null,
+      "analytic" : "actual",
+      "operator" : ">=",
+      "level" : 50.0
+    } ],
+    "actions" : [ {
+      "type" : "event",
+      "category" : 1
+    } ],
+    "enabled" : false,
+    "deleted" : false,
+    "originTenantId" : null,
+    "originPolicyId" : null,
+    "lastUpdated" : null
+  }
+}
