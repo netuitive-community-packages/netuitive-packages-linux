@@ -2,7 +2,7 @@ netuitive.packages.linux 1.0.0
 ----------------------
 
 **Default Collectors**
-The following are the collectors that are enabled by default in the Netuitive Agent, and are the ones we assume Diamond customers will use by default as well.
+The following are the collectors that are enabled by default in the Netuitive Agent, and are the ones we assume Netuitive customers will use by default as well.
 
  - **CPU** - collects CPU utilization metric using /proc/stat
  - **DiskSpace** - uses /proc/mounts and os.statvfs() to get disk space usage
