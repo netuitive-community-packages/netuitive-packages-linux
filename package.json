@@ -10,7 +10,7 @@
     },
     "distro" : {
       "logo" : "http://assets.app.netuitive.com/pkg/logo/netuitive/banner_logo.png",
-      "download" : null
+      "download" : "https://github.com/netuitive-community-packages/netuitive-packages-linux/archive/master.zip"
     },
     "compatibility" : [ "DIAMOND", "INFRASTRUCTURE" ],
     "tags" : [ ],
