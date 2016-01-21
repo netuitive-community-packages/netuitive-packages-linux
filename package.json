@@ -35,6 +35,24 @@
       "content" : null
     }
   } ],
-  "analyticConfigurations" : [ ],
+  "analyticConfigurations" : [ {
+    "data" : {
+      "file" : "analyticConfigurations/ace-diamond.server.json",
+      "encoding" : "application/json",
+      "content" : null
+    }
+  }, {
+    "data" : {
+      "file" : "analyticConfigurations/computed_metric-diamond.server.json",
+      "encoding" : "application/json",
+      "content" : null
+    }
+  }, {
+    "data" : {
+      "file" : "analyticConfigurations/metric_meta-diamond.server.json",
+      "encoding" : "application/json",
+      "content" : null
+    }
+  } ],
   "dashboards" : [ ]
 }
