@@ -2,7 +2,7 @@
   "policy" : {
     "id" : null,
     "name" : "Elevated User CPU",
-    "description" : null,
+    "description" : "This policy will generate an Informational event when CPU usage by user processes is higher than normal, but only if the actual value is also above 50%. Customers typically don't want to be informed of deviations in CPU behavior when the actual values are too low; you may want to tune the 50% threshold for your environment.",
     "scope" : {
       "elementName" : "",
       "elementType" : "SERVER",
@@ -25,8 +25,12 @@
     "actions" : [ {
       "type" : "event",
       "category" : 1
+    }, {
+      "type" : "notification",
+      "id" : 23513,
+      "enabled" : true
     } ],
-    "enabled" : false,
+    "enabled" : true,
     "deleted" : false,
     "originTenantId" : null,
     "originPolicyId" : null,

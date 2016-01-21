@@ -16,25 +16,25 @@
     "tags" : [ ],
     "checksum" : null
   },
-  "policies" : [ {
+  "policies" : [ ],
+  "analyticConfigurations" : [ {
     "data" : {
-      "file" : "policies/elevated.memory.usage.(diamond).json",
+      "file" : "analyticConfigurations/ace-diamond.server.json",
       "encoding" : "application/json",
       "content" : null
     }
   }, {
     "data" : {
-      "file" : "policies/elevated.system.cpu.json",
+      "file" : "analyticConfigurations/computed_metric-diamond.server.json",
       "encoding" : "application/json",
       "content" : null
     }
   }, {
     "data" : {
-      "file" : "policies/elevated.user.cpu.json",
+      "file" : "analyticConfigurations/metric_meta-diamond.server.json",
       "encoding" : "application/json",
       "content" : null
     }
   } ],
-  "analyticConfigurations" : [ ],
   "dashboards" : [ ]
 }
