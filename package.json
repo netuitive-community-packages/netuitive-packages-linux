@@ -18,19 +18,19 @@
   },
   "policies" : [ {
     "data" : {
-      "file" : "policies/elevated.memory.usage.(diamond).json",
+      "file" : "policies/linux.-.elevated.memory.usage.json",
       "encoding" : "application/json",
       "content" : null
     }
   }, {
     "data" : {
-      "file" : "policies/elevated.system.cpu.json",
+      "file" : "policies/linux.-.elevated.system.cpu.json",
       "encoding" : "application/json",
       "content" : null
     }
   }, {
     "data" : {
-      "file" : "policies/elevated.user.cpu.json",
+      "file" : "policies/linux.-.elevated.user.cpu.json",
       "encoding" : "application/json",
       "content" : null
     }
