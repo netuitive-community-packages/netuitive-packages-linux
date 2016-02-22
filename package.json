@@ -1,6 +1,6 @@
 {
   "id" : "netuitive.packages.linux",
-  "version" : "1.0.0",
+  "version" : "1.1.0",
   "manifest" : {
     "name" : "Netuitive Packages Linux",
     "description" : "A set of Netuitive analytics configurations, polices, dashboards, and reports that are used to monitor performance of the default collectors in the Netuitive Agent (CPU, DiskSpace, DiskUsage, LoadAverage, Memory, Network, VMStat)",
@@ -12,7 +12,7 @@
       "logo" : "http://assets.app.netuitive.com/pkg/logo/netuitive/banner_logo.png",
       "download" : "https://github.com/netuitive-community-packages/netuitive-packages-linux/archive/master.zip"
     },
-    "compatibility" : [ "DIAMOND","INFRASTRUCTURE"],
+    "compatibility" : [ "DIAMOND", "INFRASTRUCTURE" ],
     "tags" : [ ],
     "checksum" : null
   },
@@ -54,5 +54,11 @@
       "content" : null
     }
   } ],
-  "dashboards" : [ ]
+  "dashboards" : [ {
+    "data" : {
+      "file" : "dashboards/linux.summary.json",
+      "encoding" : "application/json",
+      "content" : null
+    }
+  } ]
 }

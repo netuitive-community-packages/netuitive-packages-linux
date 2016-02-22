@@ -1,7 +1,6 @@
-netuitive.packages.linux 1.0.0
-----------------------
+#netuitive.packages.linux 1.1.0
 
-**Default Collectors**
+##Default Collectors
 The following are the collectors that are enabled by default in the Netuitive Agent, and are the ones we assume Netuitive customers will use by default as well.
 
  - **CPU** - collects CPU utilization metric using /proc/stat
@@ -14,3 +13,13 @@ The following are the collectors that are enabled by default in the Netuitive Ag
    on virtual memory manager
 
 Additional collectors may be enabled; policies and configurations for those collectors will be package separately as they become available.
+
+##Release History
+
+###Version 1.1.0
+
+* Added summary dashboard.
+
+###Version 1.0.0
+
+* Initial production release of the package for monitoring Linux OS resources.
