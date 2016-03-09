@@ -10,25 +10,27 @@
     },
     "duration" : 1800,
     "conditions" : [ {
-      "metric" : "netuitive.diamond.memory.utilizationpercent",
+      "metric" : "netuitive.linux.memory.utilizationpercent",
       "wildcard" : null,
       "analytic" : "baselineDeviation",
       "operator" : ">",
-      "level" : null
+      "level" : null,
+      "level2" : null,
+      "metricThresholdLevel" : null,
+      "metricThresholdAnalytic" : null
     }, {
-      "metric" : "netuitive.diamond.memory.utilizationpercent",
+      "metric" : "netuitive.linux.memory.utilizationpercent",
       "wildcard" : null,
       "analytic" : "actual",
       "operator" : ">=",
-      "level" : 50.0
+      "level" : 50.0,
+      "level2" : null,
+      "metricThresholdLevel" : null,
+      "metricThresholdAnalytic" : null
     } ],
     "actions" : [ {
       "type" : "event",
       "category" : 1
-    }, {
-      "type" : "notification",
-      "id" : 23513,
-      "enabled" : true
     } ],
     "enabled" : true,
     "deleted" : false,
