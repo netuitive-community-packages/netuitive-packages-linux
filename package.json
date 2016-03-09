@@ -49,13 +49,13 @@
   } ],
   "analyticConfigurations" : [ {
     "data" : {
-      "file" : "analyticConfigurations/ace-diamond.server.json",
+      "file" : "analyticConfigurations/ace-linux.json",
       "encoding" : "application/json",
       "content" : null
     }
   }, {
     "data" : {
-      "file" : "analyticConfigurations/computed_metric-diamond.server.json",
+      "file" : "analyticConfigurations/computed_metric-linux.json",
       "encoding" : "application/json",
       "content" : null
     }

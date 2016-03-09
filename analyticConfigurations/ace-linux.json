@@ -4,14 +4,14 @@
     "type" : "ACE",
     "id" : null,
     "packageId" : null,
-    "name" : "Diamond SERVER",
+    "name" : "Linux",
     "scope" : {
       "elementName" : null,
       "elementType" : "SERVER",
       "elementTags" : null
     },
     "metrics" : [ {
-      "match" : "netuitive.diamond.memory.utilizationpercent",
+      "match" : "netuitive.linux.memory.utilizationpercent",
       "properties" : {
         "baseline" : true,
         "correlation" : true
@@ -35,7 +35,7 @@
         "correlation" : true
       }
     }, {
-      "match" : "netuitive.diamond.cpu.total.utilization.percent",
+      "match" : "netuitive.linux.cpu.total.utilization.percent",
       "properties" : {
         "baseline" : true,
         "correlation" : true
@@ -95,19 +95,19 @@
         "correlation" : true
       }
     }, {
-      "match" : "netuitive.diamond.network.(.*).packets",
+      "match" : "netuitive.linux.network.(.*).packets",
       "properties" : {
         "baseline" : true,
         "correlation" : true
       }
     }, {
-      "match" : "netuitive.diamond.network.(.*).errors.percent",
+      "match" : "netuitive.linux.network.(.*).errors.percent",
       "properties" : {
         "baseline" : true,
         "correlation" : true
       }
     }, {
-      "match" : "netuitive.diamond.diskspace.(.*).byte_percentused",
+      "match" : "netuitive.linux.diskspace.(.*).byte_percentused",
       "properties" : {
         "baseline" : false,
         "correlation" : false
