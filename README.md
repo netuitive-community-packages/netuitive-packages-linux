@@ -19,9 +19,8 @@ Additional collectors may be enabled; policies and configurations for those coll
 ###Version 2.0.0
 
 * Added units to all metrics.
-* Added new policies:
-** "Linux - CPU Threshold Exceeded"
-** "Linux - Disk Utilization Threshold Exceeded"
+* Added new policy: "Linux - CPU Threshold Exceeded"
+* Added new policy: "Linux - Disk Utilization Threshold Exceeded"
 * Updated computed metric names for new naming convention
 
 ###Version 1.1.0
