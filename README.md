@@ -1,4 +1,4 @@
-#netuitive.packages.linux 1.1.0
+#netuitive.packages.linux 2.0.0
 
 ##Default Collectors
 The following are the collectors that are enabled by default in the Netuitive Agent, and are the ones we assume Netuitive customers will use by default as well.
@@ -15,6 +15,13 @@ The following are the collectors that are enabled by default in the Netuitive Ag
 Additional collectors may be enabled; policies and configurations for those collectors will be package separately as they become available.
 
 ##Release History
+
+###Version 2.0.0
+
+* Added units to all metrics.
+* Added new policy: "Linux - CPU Threshold Exceeded"
+* Added new policy: "Linux - Disk Utilization Threshold Exceeded"
+* Updated computed metric names for new naming convention
 
 ###Version 1.1.0
 
