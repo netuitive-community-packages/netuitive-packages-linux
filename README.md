@@ -1,4 +1,4 @@
-#netuitive.packages.linux 2.0.0
+#netuitive.packages.linux 2.0.1
 
 ##Default Collectors
 The following are the collectors that are enabled by default in the Netuitive Agent, and are the ones we assume Netuitive customers will use by default as well.
@@ -15,6 +15,10 @@ The following are the collectors that are enabled by default in the Netuitive Ag
 Additional collectors may be enabled; policies and configurations for those collectors will be package separately as they become available.
 
 ##Release History
+
+###Version 2.0.1
+
+* Fixed bug where some widgets on the summary dashboard were referencing old metric names.
 
 ###Version 2.0.0
 
