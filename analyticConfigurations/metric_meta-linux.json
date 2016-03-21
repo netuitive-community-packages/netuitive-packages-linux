@@ -204,7 +204,7 @@
         "validMax" : 100
       }
     }, {
-      "match" : "netuitive.linux.network.*.errorpercent",
+      "match" : "netuitive.linux.network.*.errorspercent",
       "properties" : {
         "tags" : {
           "unit" : "percent"

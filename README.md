@@ -19,6 +19,7 @@ Additional collectors may be enabled; policies and configurations for those coll
 ###Version 2.1.0
 
 * Added Linux-specific element detail page.
+* Updated memory percent and network error percent metrics to show as percentages.
 
 ###Version 2.0.1
 
