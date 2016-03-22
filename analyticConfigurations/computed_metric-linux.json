@@ -39,11 +39,11 @@
         "fqn" : "netuitive.linux.network.${1}.packets"
       }
     }, {
-      "match" : "netuitive.linux.network.errors.percent",
+      "match" : "netuitive.linux.network.errorspercent",
       "properties" : {
-        "expression" : "(data['netuitive.linux.network.${1}.errors'].actual / data['netuitive.linux.network.${1}.packets'].actual) * 100",
+        "expression" : "(data['netuitive.linux.network.${1}.packets'].actual == null || data['netuitive.linux.network.${1}.packets'].actual == 0) ? 0 : (data['netuitive.linux.network.${1}.errors'].actual / data['netuitive.linux.network.${1}.packets'].actual) * 100",
         "for" : "netuitive.linux.network.(.*).errors",
-        "fqn" : "netuitive.linux.network.${1}.errors.percent"
+        "fqn" : "netuitive.linux.network.${1}.errorspercent"
       }
     }, {
       "match" : "netuitive.linux.diskspace.byte_percentused",
