@@ -52,6 +52,20 @@
         "for" : "diskspace.(.*).byte_percentfree",
         "fqn" : "netuitive.linux.diskspace.${1}.byte_percentused"
       }
+    }, {
+      "match" : "netuitive.linux.iostat.total.reads_byte",
+      "properties" : {
+        "expression" : "data.sum('iostat.*.reads_byte')",
+        "fqn" : "netuitive.linux.iostat.total.reads_byte",
+        "name" : "Total Bytes Read Across All Disks"
+      }
+    }, {
+      "match" : "netuitive.linux.iostat.total.writes_byte",
+      "properties" : {
+        "expression" : "data.sum('iostat.*.writes_byte')",
+        "fqn" : "netuitive.linux.iostat.total.writes_byte",
+        "name" : "Total Bytes Written Across All Disks"
+      }
     } ]
   }
 }
