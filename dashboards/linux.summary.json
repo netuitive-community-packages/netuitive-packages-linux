@@ -71,27 +71,34 @@
       "updated" : "2016-02-22T22:56:17Z"
     }, {
       "id" : "4764b195-9d48-4f0f-a7ba-47c74167b88e",
-      "name" : "Disk Write by Element",
+      "name" : "Total Bytes Written to Disks by Element",
       "description" : null,
       "widgetType" : "multi-metric-time-series",
       "properties" : {
-        "elementScopeIds" : "[]",
-        "elementScopeAttributes" : "[]",
-        "showHighest" : "true",
+        "visualization" : null,
         "showElementTotal" : "true",
         "selectedAttributes" : "[]",
         "elementScopeTags" : "[]",
         "useElementNameContains" : "true",
-        "width" : "auto",
+        "element_id" : null,
         "elementScopeTypes" : "[\"SERVER\"]",
         "metricLimit" : "10",
-        "metrics" : "[{\"fqn\":\"iostat.xvda.writes_byte\",\"aggFns\":[]}]",
+        "metricUnit" : null,
+        "metricAggs" : "[]",
+        "elementScopeIds" : "[]",
+        "elementScopeAttributes" : "[]",
+        "groupName" : null,
+        "elementNameContains" : null,
+        "showHighest" : "true",
+        "metric_fqn" : null,
+        "width" : "auto",
+        "metrics" : "[{\"fqn\":\"netuitive.linux.iostat.total.writes_byte\",\"aggFns\":[]}]",
         "selectedTab" : "table"
       },
       "dashboardId" : null,
       "userId" : null,
       "created" : "2016-02-22T22:57:56Z",
-      "updated" : "2016-02-22T22:57:56Z"
+      "updated" : "2016-03-28T19:12:19Z"
     }, {
       "id" : "c4d35102-159d-4c10-ab79-11b842a15696",
       "name" : "Network In By Element",
@@ -150,27 +157,34 @@
       "updated" : "2016-02-22T22:47:44Z"
     }, {
       "id" : "37b7ab07-e34a-43c3-8a70-7742579bcc9b",
-      "name" : "Disk Read by Element",
+      "name" : "Total Bytes Read from Disks by Element",
       "description" : null,
       "widgetType" : "multi-metric-time-series",
       "properties" : {
-        "elementScopeIds" : "[]",
-        "elementScopeAttributes" : "[]",
-        "showHighest" : "true",
+        "visualization" : null,
         "showElementTotal" : "true",
         "selectedAttributes" : "[]",
         "elementScopeTags" : "[]",
         "useElementNameContains" : "true",
-        "width" : "auto",
+        "element_id" : null,
         "elementScopeTypes" : "[\"SERVER\"]",
         "metricLimit" : "10",
-        "metrics" : "[{\"fqn\":\"iostat.xvda.reads_byte\",\"aggFns\":[]}]",
+        "metricUnit" : null,
+        "metricAggs" : "[]",
+        "elementScopeIds" : "[]",
+        "elementScopeAttributes" : "[]",
+        "groupName" : null,
+        "elementNameContains" : null,
+        "showHighest" : "true",
+        "metric_fqn" : null,
+        "width" : "auto",
+        "metrics" : "[{\"fqn\":\"netuitive.linux.iostat.total.reads_byte\",\"aggFns\":[]}]",
         "selectedTab" : "table"
       },
       "dashboardId" : null,
       "userId" : null,
       "created" : "2016-02-22T22:56:58Z",
-      "updated" : "2016-02-22T22:56:58Z"
+      "updated" : "2016-03-28T19:12:40Z"
     }, {
       "id" : "a5b64a22-0ec9-423d-9010-9995e2146a3d",
       "name" : "Top 5 Highest Utilized",
