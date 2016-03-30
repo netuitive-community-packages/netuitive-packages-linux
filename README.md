@@ -1,4 +1,4 @@
-#netuitive.packages.linux 2.1.0
+#netuitive.packages.linux 2.2.0
 
 ##Default Collectors
 The following are the collectors that are enabled by default in the Netuitive Agent, and are the ones we assume Netuitive customers will use by default as well.
@@ -15,6 +15,16 @@ The following are the collectors that are enabled by default in the Netuitive Ag
 Additional collectors may be enabled; policies and configurations for those collectors will be package separately as they become available.
 
 ##Release History
+
+###Version 2.2.0
+
+* Added new policy: "Linux - Heavy CPU Load"
+* Added new policy: "Linux - Heavy Disk Load"
+* Added new policy: "Linux - Heavy Disk Load with Slow Performance"
+* Added new policy: "Linux - Memory Utilization Exceeded"
+* Fixed a bug in policy "Linux - Disk Utilization Threshold Exceeded" where the wrong metric was being evaluated.
+* Added new computed metrics to summarize activity across all disks.
+* Updated the "Linux Summary" dashboard to display graphs of the highest disk activity.
 
 ###Version 2.1.0
 

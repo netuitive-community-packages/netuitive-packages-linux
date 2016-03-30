@@ -1,8 +1,8 @@
 {
   "policy" : {
     "id" : null,
-    "name" : "Linux - Disk Utilization Threshold Exceeded",
-    "description" : "The consumed disk space on the SERVER instance has exceeded 90% for at least 15 minutes.",
+    "name" : "Linux - Memory Utilization Exceeded",
+    "description" : "This is a CRITICAL event which is raised when memory utilization exceeds 90%.",
     "scope" : {
       "elementName" : "",
       "elementType" : "SERVER",
@@ -10,8 +10,8 @@
     },
     "duration" : 900,
     "conditions" : [ {
-      "metric" : "",
-      "wildcard" : "netuitive.linux.diskspace.*.byte_percentused",
+      "metric" : "netuitive.linux.memory.utilizationpercent",
+      "wildcard" : null,
       "analytic" : "actual",
       "operator" : ">",
       "level" : 90.0,
