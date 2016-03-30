@@ -7,7 +7,7 @@
     "name" : "Linux",
     "scope" : {
       "elementName" : null,
-      "elementType" : "SERVER",
+      "elementType" : null,
       "elementTags" : null
     },
     "metrics" : [ {
