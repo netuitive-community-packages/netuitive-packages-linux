@@ -1,0 +1,32 @@
+{
+  "policy" : {
+    "id" : null,
+    "name" : "Linux - Memory Utilization Exceeded",
+    "description" : "This is a CRITICAL event which is raised when memory utilization exceeds 90%.",
+    "scope" : {
+      "elementName" : "",
+      "elementType" : "SERVER",
+      "elementTags" : { }
+    },
+    "duration" : 900,
+    "conditions" : [ {
+      "metric" : "netuitive.linux.memory.utilizationpercent",
+      "wildcard" : null,
+      "analytic" : "actual",
+      "operator" : ">",
+      "level" : 90.0,
+      "level2" : null,
+      "metricThresholdLevel" : null,
+      "metricThresholdAnalytic" : null
+    } ],
+    "actions" : [ {
+      "type" : "event",
+      "category" : 3
+    } ],
+    "enabled" : true,
+    "deleted" : false,
+    "originTenantId" : null,
+    "originPolicyId" : null,
+    "lastUpdated" : null
+  }
+}

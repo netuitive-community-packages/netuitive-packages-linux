@@ -1,0 +1,59 @@
+{
+  "policy" : {
+    "id" : null,
+    "name" : "Linux - Heavy Disk Load",
+    "description" : "This is a WARNING which indicates that the disk is experiencing heavy load, but performance has not yet been impacted.",
+    "scope" : {
+      "elementName" : "",
+      "elementType" : "SERVER",
+      "elementTags" : { }
+    },
+    "duration" : 900,
+    "conditions" : [ {
+      "metric" : "",
+      "wildcard" : "iostat.*\\.average_queue_length",
+      "analytic" : "baselineDeviation",
+      "operator" : ">",
+      "level" : null,
+      "level2" : null,
+      "metricThresholdLevel" : null,
+      "metricThresholdAnalytic" : null
+    }, {
+      "metric" : "",
+      "wildcard" : "iostat.*\\.average_queue_length",
+      "analytic" : "contextualDeviation",
+      "operator" : ">",
+      "level" : null,
+      "level2" : null,
+      "metricThresholdLevel" : null,
+      "metricThresholdAnalytic" : null
+    }, {
+      "metric" : "",
+      "wildcard" : "iostat.*\\.await",
+      "analytic" : "baselineDeviation",
+      "operator" : "undefined",
+      "level" : null,
+      "level2" : null,
+      "metricThresholdLevel" : null,
+      "metricThresholdAnalytic" : null
+    }, {
+      "metric" : "",
+      "wildcard" : "iostat.*\\.await",
+      "analytic" : "contextualDeviation",
+      "operator" : "undefined",
+      "level" : null,
+      "level2" : null,
+      "metricThresholdLevel" : null,
+      "metricThresholdAnalytic" : null
+    } ],
+    "actions" : [ {
+      "type" : "event",
+      "category" : 2
+    } ],
+    "enabled" : true,
+    "deleted" : false,
+    "originTenantId" : null,
+    "originPolicyId" : null,
+    "lastUpdated" : null
+  }
+}
