@@ -10,8 +10,8 @@
     },
     "duration" : 900,
     "conditions" : [ {
-      "metric" : "netuitive.linux.memory.utilizationpercent",
-      "wildcard" : null,
+      "metric" : "",
+      "wildcard" : "netuitive.linux.diskspace.*.byte_percentused",
       "analytic" : "actual",
       "operator" : ">",
       "level" : 90.0,
