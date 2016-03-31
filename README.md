@@ -19,6 +19,7 @@ Additional collectors may be enabled; policies and configurations for those coll
 ###Version 2.3.0
 
 * Updated configurations so that EC2 elements which are also receiving Linux metrics from the Netuitive agent will be able to handle those metrics correctly.
+* Removed two obsolete computed metrics.
 
 ###Version 2.2.0
 
