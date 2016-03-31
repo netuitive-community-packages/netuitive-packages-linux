@@ -1,5 +1,7 @@
 #netuitive.packages.linux 2.3.0
 
+For detailed information on this package, please refer to the [online documentation](https://help.app.netuitive.com/Content/Misc/Datasources/Netuitive/new_netuitive_datasource.htm).
+
 ##Default Collectors
 The following are the collectors that are enabled by default in the Netuitive Agent, and are the ones we assume Netuitive customers will use by default as well.
 
