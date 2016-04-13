@@ -14,7 +14,7 @@
       "wildcard" : "netuitive.linux.diskspace.*.byte_percentused",
       "analytic" : "actual",
       "operator" : ">",
-      "level" : 90.0,
+      "level" : 95.0,
       "level2" : null,
       "metricThresholdLevel" : null,
       "metricThresholdAnalytic" : null
@@ -27,6 +27,7 @@
     "deleted" : false,
     "originTenantId" : null,
     "originPolicyId" : null,
+    "creatorEmail" : null,
     "lastUpdated" : null
   }
 }
