@@ -20,7 +20,7 @@
     }, {
       "match" : "netuitive.linux.cpu.total.utilization.percent",
       "properties" : {
-        "expression" : "(data['cpu.total.idle'] != null && data['cpu.total.idle'].actual != null) ? ((data.sum('cpu.total.*') - data['cpu.total.idle'].actual) / data.sum('cpu.total.*')) * 100 : ((data.sum('cpu[.].*') - data.sum('cpu[.].*.idle')) / data.sum('cpu[.].*')) * 100",
+        "expression" : "(data['cpu.total.idle'] != null && data['cpu.total.idle'].actual != null) ? ((data.sum('cpu.total.*') - data['cpu.total.idle'].actual) / data.sum('cpu.total.*')) * 100 : data['cpu.cpu0.idle'] != null ? ((data.sum('cpu[.].*') - data.sum('cpu[.].*.idle')) / data.sum('cpu[.].*')) * 100 : null",
         "fqn" : "netuitive.linux.cpu.total.utilization.percent",
         "name" : "CPU Utilization Percent"
       }
