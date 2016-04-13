@@ -1,4 +1,4 @@
-#netuitive.packages.linux 2.3.0
+#netuitive.packages.linux 2.3.1
 
 For detailed information on this package, please refer to the [online documentation](https://help.app.netuitive.com/Content/Misc/Datasources/Netuitive/new_netuitive_datasource.htm).
 
@@ -17,6 +17,12 @@ The following are the collectors that are enabled by default in the Netuitive Ag
 Additional collectors may be enabled; policies and configurations for those collectors will be package separately as they become available.
 
 ##Release History
+
+###Version 2.3.1
+
+* Bug fix: changed the formula for the CPU utilization computed metric to ensure it wouldn't match against JVM CPU metrics.
+* Changed the thresholds on the Disk and Memory Utilization Threshold Exceeded policies to 95% rather than 90% (quieter and consistent with the CPU policy).
+* Renamed "Linux - Memory Utilization Exceeded" policy to "Linux - Memory Utilization Threshold Exceeded", for consistency.
 
 ###Version 2.3.0
 
