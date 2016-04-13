@@ -1,7 +1,7 @@
 {
   "policy" : {
     "id" : null,
-    "name" : "Linux - Memory Utilization Exceeded",
+    "name" : "Linux - Memory Utilization Threshold Exceeded",
     "description" : "This is a CRITICAL event which is raised when memory utilization exceeds 90%.",
     "scope" : {
       "elementName" : "",
@@ -14,7 +14,7 @@
       "wildcard" : null,
       "analytic" : "actual",
       "operator" : ">",
-      "level" : 90.0,
+      "level" : 95.0,
       "level2" : null,
       "metricThresholdLevel" : null,
       "metricThresholdAnalytic" : null
@@ -27,6 +27,7 @@
     "deleted" : false,
     "originTenantId" : null,
     "originPolicyId" : null,
+    "creatorEmail" : null,
     "lastUpdated" : null
   }
 }
