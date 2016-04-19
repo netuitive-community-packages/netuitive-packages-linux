@@ -17,7 +17,7 @@
         "correlation" : true
       }
     }, {
-      "match" : "loadavg.05",
+      "match" : "netuitive.linux.loadavg.05.normalized",
       "properties" : {
         "baseline" : true,
         "correlation" : true

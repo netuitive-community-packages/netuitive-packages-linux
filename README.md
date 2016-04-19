@@ -1,4 +1,4 @@
-#netuitive.packages.linux 2.3.1
+#netuitive.packages.linux 2.4.0
 
 For detailed information on this package, please refer to the [online documentation](https://help.app.netuitive.com/Content/Misc/Datasources/Netuitive/new_netuitive_datasource.htm).
 
@@ -17,6 +17,13 @@ The following are the collectors that are enabled by default in the Netuitive Ag
 Additional collectors may be enabled; policies and configurations for those collectors will be package separately as they become available.
 
 ##Release History
+
+###Version 2.4.0
+
+* Bug fix: policy "Linux - Heavy Disk Load" was checking an extra condition.
+* Bug fix: typo in the Linux disk and memory threshold policy descriptions.
+* Introduced new computed metrics for normalized load.
+* Adjusted the "Linux - Heavy CPU Load" policy to check the new normalized load metrics.
 
 ###Version 2.3.1
 

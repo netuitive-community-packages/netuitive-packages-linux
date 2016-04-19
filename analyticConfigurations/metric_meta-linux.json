@@ -91,7 +91,7 @@
     }, {
       "match" : "network\\..*",
       "properties" : {
-        "STATISTIC" : "sum"
+        "statistic" : "sum"
       }
     }, {
       "match" : "network\\..*bit",

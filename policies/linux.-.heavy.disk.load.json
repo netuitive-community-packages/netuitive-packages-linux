@@ -27,24 +27,6 @@
       "level2" : null,
       "metricThresholdLevel" : null,
       "metricThresholdAnalytic" : null
-    }, {
-      "metric" : "",
-      "wildcard" : "iostat.*\\.await",
-      "analytic" : "baselineDeviation",
-      "operator" : "undefined",
-      "level" : null,
-      "level2" : null,
-      "metricThresholdLevel" : null,
-      "metricThresholdAnalytic" : null
-    }, {
-      "metric" : "",
-      "wildcard" : "iostat.*\\.await",
-      "analytic" : "contextualDeviation",
-      "operator" : "undefined",
-      "level" : null,
-      "level2" : null,
-      "metricThresholdLevel" : null,
-      "metricThresholdAnalytic" : null
     } ],
     "actions" : [ {
       "type" : "event",
@@ -54,6 +36,7 @@
     "deleted" : false,
     "originTenantId" : null,
     "originPolicyId" : null,
+    "creatorEmail" : null,
     "lastUpdated" : null
   }
 }
