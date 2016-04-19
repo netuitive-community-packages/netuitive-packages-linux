@@ -52,6 +52,24 @@
         "for" : "diskspace.(.*).byte_percentfree",
         "fqn" : "netuitive.linux.diskspace.${1}.byte_percentused"
       }
+    }, {
+      "match" : "netuitive.linux.loadavg.01.normalized",
+      "properties" : {
+        "expression" : "attribute['cpus'] == null ? null : (data['loadavg.01'].actual / attribute['cpus'].value)",
+        "fqn" : "netuitive.linux.loadavg.01.normalized"
+      }
+    }, {
+      "match" : "netuitive.linux.loadavg.05.normalized",
+      "properties" : {
+        "expression" : "attribute['cpus'] == null ? null : (data['loadavg.05'].actual / attribute['cpus'].value)",
+        "fqn" : "netuitive.linux.loadavg.05.normalized"
+      }
+    }, {
+      "match" : "netuitive.linux.loadavg.15.normalized",
+      "properties" : {
+        "expression" : "attribute['cpus'] == null ? null : (data['loadavg.15'].actual / attribute['cpus'].value)",
+        "fqn" : "netuitive.linux.loadavg.15.normalized"
+      }
     } ]
   }
 }

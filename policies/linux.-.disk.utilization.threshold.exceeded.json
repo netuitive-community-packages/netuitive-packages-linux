@@ -2,7 +2,7 @@
   "policy" : {
     "id" : null,
     "name" : "Linux - Disk Utilization Threshold Exceeded",
-    "description" : "The consumed disk space on the SERVER instance has exceeded 90% for at least 15 minutes.",
+    "description" : "The consumed disk space on the SERVER instance has exceeded 95% for at least 15 minutes.",
     "scope" : {
       "elementName" : "",
       "elementType" : "SERVER",
