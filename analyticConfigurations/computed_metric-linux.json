@@ -25,6 +25,20 @@
         "name" : "CPU Utilization Percent"
       }
     }, {
+      "match" : "netuitive.linux.cpu.total.system.normalized",
+      "properties" : {
+        "expression" : "attribute['cpus'] == null ? null : (data['cpu.total.system'].actual / attribute['cpus'].value)",
+        "fqn" : "netuitive.linux.cpu.total.system.normalized",
+        "name" : "CPU System Percent Normalized"
+      }
+    }, {
+      "match" : "netuitive.linux.cpu.total.usernormalized",
+      "properties" : {
+        "expression" : "attribute['cpus'] == null ? null : (data['cpu.total.user'].actual / attribute['cpus'].value)",
+        "fqn" : "netuitive.linux.cpu.total.user.normalized",
+        "name" : "CPU User Percent Normalized"
+      }
+    }, {
       "match" : "netuitive.linux.network.errors",
       "properties" : {
         "expression" : "data['network.${1}.rx_errors'].actual + data['network.${1}.tx_errors'].actual",
@@ -69,6 +83,20 @@
       "properties" : {
         "expression" : "attribute['cpus'] == null ? null : (data['loadavg.15'].actual / attribute['cpus'].value)",
         "fqn" : "netuitive.linux.loadavg.15.normalized"
+      }
+    }, {
+      "match" : "netuitive.linux.iostat.totalreads",
+      "properties" : {
+        "expression" : "data.sum('iostat\\..*\\.reads')",
+        "fqn" : "netuitive.linux.iostat.totalreads",
+        "name" : "Total Reads Across All Disks"
+      }
+    }, {
+      "match" : "netuitive.linux.iostat.totalwrites",
+      "properties" : {
+        "expression" : "data.sum('iostat\\..*\\.writes')",
+        "fqn" : "netuitive.linux.iostat.totalwrites",
+        "name" : "Total Writes Across All Disks"
       }
     } ]
   }

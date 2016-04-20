@@ -1,4 +1,4 @@
-#netuitive.packages.linux 2.4.0
+#netuitive.packages.linux 2.4.1
 
 For detailed information on this package, please refer to the [online documentation](https://help.app.netuitive.com/Content/Misc/Datasources/Netuitive/new_netuitive_datasource.htm).
 
@@ -17,6 +17,12 @@ The following are the collectors that are enabled by default in the Netuitive Ag
 Additional collectors may be enabled; policies and configurations for those collectors will be package separately as they become available.
 
 ##Release History
+
+###Version 2.4.1
+
+* Bug fix: tuned policies "Linux - Elevated User CPU" and "Linux - Elevated System CPU" to check normalized metrics.
+* Bug fix: tuned number of correlated metrics to better work with large numbers of disk and network metrics.
+* Bug fix: corrected the disk widgets on the Linux Summary dashboard.
 
 ###Version 2.4.0
 
