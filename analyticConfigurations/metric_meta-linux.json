@@ -20,6 +20,14 @@
         "validMax" : 100
       }
     }, {
+      "match" : "netuitive.linux.cpu.total\\..*\\.normalized",
+      "properties" : {
+        "tags" : {
+          "unit" : "percent"
+        },
+        "validMax" : 100
+      }
+    }, {
       "match" : "iostat\\..*\\.util_percentage",
       "properties" : {
         "tags" : {

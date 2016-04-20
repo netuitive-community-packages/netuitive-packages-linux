@@ -35,61 +35,7 @@
         "correlation" : true
       }
     }, {
-      "match" : "netuitive.linux.cpu.total.utilization.percent",
-      "properties" : {
-        "baseline" : true,
-        "correlation" : true
-      }
-    }, {
-      "match" : "cpu.total.guest",
-      "properties" : {
-        "baseline" : true,
-        "correlation" : true
-      }
-    }, {
-      "match" : "cpu.total.guest_nice",
-      "properties" : {
-        "baseline" : true,
-        "correlation" : true
-      }
-    }, {
-      "match" : "cpu.total.iowait",
-      "properties" : {
-        "baseline" : true,
-        "correlation" : true
-      }
-    }, {
-      "match" : "cpu.total.irq",
-      "properties" : {
-        "baseline" : true,
-        "correlation" : true
-      }
-    }, {
-      "match" : "cpu.total.nice",
-      "properties" : {
-        "baseline" : true,
-        "correlation" : true
-      }
-    }, {
-      "match" : "cpu.total.softirq",
-      "properties" : {
-        "baseline" : true,
-        "correlation" : true
-      }
-    }, {
-      "match" : "cpu.total.steal",
-      "properties" : {
-        "baseline" : true,
-        "correlation" : true
-      }
-    }, {
-      "match" : "cpu.total.system",
-      "properties" : {
-        "baseline" : true,
-        "correlation" : true
-      }
-    }, {
-      "match" : "cpu.total.user",
+      "match" : "netuitive.linux.cpu.*",
       "properties" : {
         "baseline" : true,
         "correlation" : true
@@ -101,28 +47,10 @@
         "correlation" : true
       }
     }, {
-      "match" : "netuitive.linux.network.(.*).errors.percent",
-      "properties" : {
-        "baseline" : true,
-        "correlation" : true
-      }
-    }, {
       "match" : "netuitive.linux.diskspace.(.*).byte_percentused",
       "properties" : {
         "baseline" : false,
         "correlation" : false
-      }
-    }, {
-      "match" : "iostat.(.*).await",
-      "properties" : {
-        "baseline" : true,
-        "correlation" : true
-      }
-    }, {
-      "match" : "iostat.(.*).iops",
-      "properties" : {
-        "baseline" : true,
-        "correlation" : true
       }
     }, {
       "match" : "iostat.(.*).util_percentage",
