@@ -57,17 +57,20 @@
         "selectedAttributes" : "[]",
         "elementScopeTags" : "[]",
         "useElementNameContains" : "true",
+        "useAllElementScopeTags" : "false",
         "element_id" : null,
-        "elementScopeTypes" : "[]",
+        "elementScopeTypes" : "[\"SERVER\"]",
         "metricLimit" : "10",
+        "useAllMetricScopeTags" : "false",
         "metricUnit" : null,
         "metricAggs" : "[]",
         "elementScopeIds" : "[]",
         "elementScopeAttributes" : "[]",
         "groupName" : null,
-        "elementNameContains" : "ip-172-31-57-135",
+        "elementNameContains" : "",
         "showHighest" : "true",
         "metric_fqn" : null,
+        "metricScopeTags" : "[]",
         "width" : "medium",
         "metrics" : "[]",
         "selectedTab" : "table"
@@ -75,7 +78,7 @@
       "dashboardId" : null,
       "userId" : null,
       "created" : "2016-03-15T16:38:09Z",
-      "updated" : "2016-03-16T13:40:19Z"
+      "updated" : "2016-05-16T19:56:09Z"
     }, {
       "id" : "1a5fae83-3ad1-4fdd-85d2-d0b79ee8585e",
       "name" : "Current CPU Utilization",
@@ -273,7 +276,7 @@
       "created" : "2016-03-16T21:26:40Z",
       "updated" : "2016-03-16T21:26:40Z"
     } ],
-    "type" : "SERVER",
+    "type" : "DEFAULT",
     "private" : false
   }
 }
