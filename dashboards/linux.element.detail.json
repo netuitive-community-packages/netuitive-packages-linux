@@ -276,7 +276,7 @@
       "created" : "2016-03-16T21:26:40Z",
       "updated" : "2016-03-16T21:26:40Z"
     } ],
-    "type" : "DEFAULT",
+    "type" : "SERVER",
     "private" : false
   }
 }
