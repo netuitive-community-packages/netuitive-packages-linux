@@ -35,7 +35,7 @@
         "correlation" : true
       }
     }, {
-      "match" : "netuitive.linux.cpu.*",
+      "match" : "netuitive.linux.cpu.total.utilization.percent",
       "properties" : {
         "baseline" : true,
         "correlation" : true
