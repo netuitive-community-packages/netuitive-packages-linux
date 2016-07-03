@@ -31,7 +31,6 @@
       "match" : "iostat\\..*\\.util_percentage",
       "properties" : {
         "tags" : {
-          "utilization" : true,
           "unit" : "percent"
         },
         "validMax" : 100
@@ -89,6 +88,14 @@
       }
     }, {
       "match" : "netuitive.linux.diskspace\\..*\\.byte_percentused",
+      "properties" : {
+        "tags" : {
+          "unit" : "percent"
+        },
+        "validMax" : 100
+      }
+    }, {
+      "match" : "netuitive.linux.diskspace\\.avg_byte_percentused",
       "properties" : {
         "tags" : {
           "utilization" : true,
@@ -225,6 +232,15 @@
         "tags" : {
           "unit" : "percent"
         }
+      }
+    }, {
+      "match" : "netuitive.linux.iostat.max_util_percentage",
+      "properties" : {
+        "tags" : {
+          "utilization" : true,
+          "unit" : "percent"
+        },
+        "validMax" : 100
       }
     } ]
   }
