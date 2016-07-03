@@ -98,6 +98,19 @@
         "fqn" : "netuitive.linux.iostat.totalwrites",
         "name" : "Total Writes Across All Disks"
       }
+    }, {
+      "match" : "netuitive.linux.iostat.max_util_percentage",
+      "properties" : {
+        "expression" : "data.max('iostat\\..*\\.util_percentage')",
+        "fqn" : "netuitive.linux.iostat.max_util_percentage",
+        "name" : "Maximum Utilization Percentage Across All Disks"
+      }
+    }, {
+      "match" : "netuitive.linux.diskspace.avg_byte_percentused",
+      "properties" : {
+        "expression" : "100 - data.avg('diskspace\\..*\\..byte_percentfree')",
+        "fqn" : "netuitive.linux.diskspace.avg_byte_percentused"
+      }
     } ]
   }
 }
