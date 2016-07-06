@@ -8,7 +8,8 @@
     "scope" : {
       "elementName" : null,
       "elementType" : null,
-      "elementTags" : null
+      "elementTags" : null,
+      "metricMatches" : "^(cpu|diskspace|iostat|loadavg|memory|network|vmstat)\\..*"
     },
     "metrics" : [ {
       "match" : "netuitive.linux.cpu.total.utilization.percent",
