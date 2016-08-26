@@ -5,6 +5,9 @@
     "description" : "This is a CRITICAL event indicating that the server's CPU is under heavy load, based upon upper deviations on CPU utilization percent and the normalized loadavg.05 metric being greater than 2.  Rule of thumb is that the run queue size (represented by the loadavg) should not be greater than 2x the number of CPUs.",
     "scope" : {
       "elementName" : "",
+      "elementNameExclude" : null,
+      "fqnIncludes" : [ ],
+      "fqnExcludes" : [ ],
       "elementType" : "SERVER",
       "elementTags" : { }
     },
@@ -12,6 +15,7 @@
     "conditions" : [ {
       "metric" : "netuitive.linux.cpu.total.utilization.percent",
       "wildcard" : null,
+      "metricScopeTags" : { },
       "analytic" : "baselineDeviation",
       "operator" : ">",
       "level" : null,
@@ -21,6 +25,7 @@
     }, {
       "metric" : "netuitive.linux.cpu.total.utilization.percent",
       "wildcard" : null,
+      "metricScopeTags" : { },
       "analytic" : "contextualDeviation",
       "operator" : ">",
       "level" : null,
@@ -30,6 +35,7 @@
     }, {
       "metric" : "netuitive.linux.loadavg.05.normalized",
       "wildcard" : null,
+      "metricScopeTags" : { },
       "analytic" : "actual",
       "operator" : ">",
       "level" : 2.0,
@@ -37,6 +43,7 @@
       "metricThresholdLevel" : null,
       "metricThresholdAnalytic" : null
     } ],
+    "eventConditions" : [ ],
     "actions" : [ {
       "type" : "event",
       "category" : 3

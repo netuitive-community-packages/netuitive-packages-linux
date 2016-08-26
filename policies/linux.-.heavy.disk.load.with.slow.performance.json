@@ -5,6 +5,9 @@
     "description" : "This is a CRITICAL event which indicates that the disk is not only experiencing heavy load, but performance is suffering.",
     "scope" : {
       "elementName" : "",
+      "elementNameExclude" : null,
+      "fqnIncludes" : [ ],
+      "fqnExcludes" : [ ],
       "elementType" : "SERVER",
       "elementTags" : { }
     },
@@ -12,6 +15,7 @@
     "conditions" : [ {
       "metric" : "",
       "wildcard" : "iostat.*\\.await",
+      "metricScopeTags" : { },
       "analytic" : "baselineDeviation",
       "operator" : ">",
       "level" : null,
@@ -21,6 +25,7 @@
     }, {
       "metric" : "",
       "wildcard" : "iostat.*\\.await",
+      "metricScopeTags" : { },
       "analytic" : "contextualDeviation",
       "operator" : ">",
       "level" : null,
@@ -30,6 +35,7 @@
     }, {
       "metric" : "",
       "wildcard" : "iostat.*\\.average_queue_length",
+      "metricScopeTags" : { },
       "analytic" : "baselineDeviation",
       "operator" : "defined",
       "level" : null,
@@ -39,6 +45,7 @@
     }, {
       "metric" : "",
       "wildcard" : "iostat.*\\.average_queue_length",
+      "metricScopeTags" : { },
       "analytic" : "contextualDeviation",
       "operator" : "defined",
       "level" : null,
@@ -46,6 +53,7 @@
       "metricThresholdLevel" : null,
       "metricThresholdAnalytic" : null
     } ],
+    "eventConditions" : [ ],
     "actions" : [ {
       "type" : "event",
       "category" : 3

@@ -5,6 +5,9 @@
     "description" : "This is a CRITICAL event which is raised when memory utilization exceeds 95%.",
     "scope" : {
       "elementName" : "",
+      "elementNameExclude" : null,
+      "fqnIncludes" : [ ],
+      "fqnExcludes" : [ ],
       "elementType" : "SERVER",
       "elementTags" : { }
     },
@@ -12,6 +15,7 @@
     "conditions" : [ {
       "metric" : "netuitive.linux.memory.utilizationpercent",
       "wildcard" : null,
+      "metricScopeTags" : { },
       "analytic" : "actual",
       "operator" : ">",
       "level" : 95.0,
@@ -19,6 +23,7 @@
       "metricThresholdLevel" : null,
       "metricThresholdAnalytic" : null
     } ],
+    "eventConditions" : [ ],
     "actions" : [ {
       "type" : "event",
       "category" : 3
