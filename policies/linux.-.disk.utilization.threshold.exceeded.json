@@ -5,6 +5,9 @@
     "description" : "The consumed disk space on the SERVER instance has exceeded 95% for at least 15 minutes.",
     "scope" : {
       "elementName" : "",
+      "elementNameExclude" : null,
+      "fqnIncludes" : [ ],
+      "fqnExcludes" : [ ],
       "elementType" : "SERVER",
       "elementTags" : { }
     },
@@ -12,6 +15,7 @@
     "conditions" : [ {
       "metric" : "",
       "wildcard" : "netuitive.linux.diskspace.*.byte_percentused",
+      "metricScopeTags" : { },
       "analytic" : "actual",
       "operator" : ">",
       "level" : 95.0,
@@ -19,6 +23,7 @@
       "metricThresholdLevel" : null,
       "metricThresholdAnalytic" : null
     } ],
+    "eventConditions" : [ ],
     "actions" : [ {
       "type" : "event",
       "category" : 3

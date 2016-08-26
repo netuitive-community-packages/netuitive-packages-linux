@@ -5,6 +5,9 @@
     "description" : "This policy will generate an Informational event when CPU usage by system processes is higher than normal, but only if the actual value is also above 30%. Customers typically don't want to be informed of deviations in CPU behavior when the actual values are too low; you may want to tune the 30% threshold for your environment.",
     "scope" : {
       "elementName" : "",
+      "elementNameExclude" : null,
+      "fqnIncludes" : [ ],
+      "fqnExcludes" : [ ],
       "elementType" : "SERVER",
       "elementTags" : { }
     },
@@ -12,6 +15,7 @@
     "conditions" : [ {
       "metric" : "netuitive.linux.cpu.total.system.normalized",
       "wildcard" : null,
+      "metricScopeTags" : { },
       "analytic" : "baselineDeviation",
       "operator" : ">",
       "level" : null,
@@ -21,6 +25,7 @@
     }, {
       "metric" : "netuitive.linux.cpu.total.system.normalized",
       "wildcard" : null,
+      "metricScopeTags" : { },
       "analytic" : "actual",
       "operator" : ">=",
       "level" : 30.0,
@@ -28,6 +33,7 @@
       "metricThresholdLevel" : null,
       "metricThresholdAnalytic" : null
     } ],
+    "eventConditions" : [ ],
     "actions" : [ {
       "type" : "event",
       "category" : 1
