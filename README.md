@@ -1,4 +1,4 @@
-#netuitive.packages.linux 2.5.2
+#netuitive.packages.linux 2.5.3
 
 For detailed information on this package, please refer to the [online documentation](https://help.app.netuitive.com/Content/Misc/Datasources/Netuitive/new_netuitive_datasource.htm).
 
@@ -17,6 +17,10 @@ The following are the collectors that are enabled by default in the Netuitive Ag
 Additional collectors may be enabled; policies and configurations for those collectors will be package separately as they become available.
 
 ##Release History
+
+###Version 2.5.3
+
+* Updated package compatibilities.
 
 ###Version 2.5.2
 
