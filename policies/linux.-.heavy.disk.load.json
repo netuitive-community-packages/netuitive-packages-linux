@@ -4,7 +4,7 @@
     "name" : "Linux - Heavy Disk Load",
     "description" : "This is a WARNING which indicates that the disk is experiencing heavy load, but performance has not yet been impacted.",
     "scope" : {
-      "elementName" : "",
+      "elementName" : null,
       "elementNameExclude" : null,
       "fqnIncludes" : [ ],
       "fqnExcludes" : [ ],
@@ -13,7 +13,7 @@
     },
     "duration" : 900,
     "conditions" : [ {
-      "metric" : "",
+      "metric" : null,
       "wildcard" : "iostat.*\\.average_queue_length",
       "metricScopeTags" : { },
       "analytic" : "baselineDeviation",
@@ -23,7 +23,7 @@
       "metricThresholdLevel" : null,
       "metricThresholdAnalytic" : null
     }, {
-      "metric" : "",
+      "metric" : null,
       "wildcard" : "iostat.*\\.average_queue_length",
       "metricScopeTags" : { },
       "analytic" : "contextualDeviation",
