@@ -4,7 +4,7 @@
     "name" : "Linux - Elevated User CPU",
     "description" : "This policy will generate an Informational event when CPU usage by user processes is higher than normal, but only if the actual value is also above 50%. Customers typically don't want to be informed of deviations in CPU behavior when the actual values are too low; you may want to tune the 50% threshold for your environment.",
     "scope" : {
-      "elementName" : "",
+      "elementName" : null,
       "elementNameExclude" : null,
       "fqnIncludes" : [ ],
       "fqnExcludes" : [ ],

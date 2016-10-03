@@ -4,7 +4,7 @@
     "name" : "Linux - CPU Threshold Exceeded",
     "description" : "The CPU on the SERVER instance has exceeded 95% for at least 15 minutes.",
     "scope" : {
-      "elementName" : "",
+      "elementName" : null,
       "elementNameExclude" : null,
       "fqnIncludes" : [ ],
       "fqnExcludes" : [ ],

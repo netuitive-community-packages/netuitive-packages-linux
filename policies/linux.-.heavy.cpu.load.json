@@ -4,7 +4,7 @@
     "name" : "Linux - Heavy CPU Load",
     "description" : "This is a CRITICAL event indicating that the server's CPU is under heavy load, based upon upper deviations on CPU utilization percent and the normalized loadavg.05 metric being greater than 2.  Rule of thumb is that the run queue size (represented by the loadavg) should not be greater than 2x the number of CPUs.",
     "scope" : {
-      "elementName" : "",
+      "elementName" : null,
       "elementNameExclude" : null,
       "fqnIncludes" : [ ],
       "fqnExcludes" : [ ],

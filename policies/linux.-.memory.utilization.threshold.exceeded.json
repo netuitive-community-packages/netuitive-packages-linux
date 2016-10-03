@@ -4,7 +4,7 @@
     "name" : "Linux - Memory Utilization Threshold Exceeded",
     "description" : "This is a CRITICAL event which is raised when memory utilization exceeds 95%.",
     "scope" : {
-      "elementName" : "",
+      "elementName" : null,
       "elementNameExclude" : null,
       "fqnIncludes" : [ ],
       "fqnExcludes" : [ ],

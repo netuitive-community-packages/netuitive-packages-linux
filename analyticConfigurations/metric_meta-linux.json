@@ -9,7 +9,7 @@
       "elementName" : null,
       "elementType" : null,
       "elementTags" : null,
-      "metricMatches" : "^(cpu|diskspace|iostat|loadavg|memory|network|vmstat)\\..*"
+      "metricMatches" : "^(cpu\\.total\\.|diskspace\\.|iostat\\.|loadavg\\.|memory\\.Mem.*|network\\..*\\.(tx_|rx_)|vmstat\\.).*"
     },
     "metrics" : [ {
       "match" : "netuitive.linux.cpu.total.utilization.percent",
