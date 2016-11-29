@@ -18,6 +18,12 @@
         "correlation" : true
       }
     }, {
+      "match" : "netuitive.metrics.heartbeat",
+      "properties" : {
+        "baseline" : false,
+        "correlation" : false
+      }
+    }, {
       "match" : "netuitive.linux.loadavg.05.normalized",
       "properties" : {
         "baseline" : true,

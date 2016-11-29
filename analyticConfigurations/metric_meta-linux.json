@@ -21,6 +21,12 @@
         "validMax" : 100
       }
     }, {
+      "match" : "netuitive.metrics.heartbeat",
+      "properties" : {
+        "sparseDataStrategy" : "ReplaceWithZero",
+        "validMax" : 1
+      }
+    }, {
       "match" : "netuitive.linux.cpu.total\\..*\\.normalized",
       "properties" : {
         "tags" : {
