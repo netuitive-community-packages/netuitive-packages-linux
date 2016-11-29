@@ -21,7 +21,7 @@ Additional collectors may be enabled; policies and configurations for those coll
 
 ###Version 2.6.0
 
-* Narrow the scoping of the package.
+* Added support for the new heartbeat collector.
 
 ###Version 2.5.5
 
