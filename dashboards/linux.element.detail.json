@@ -202,14 +202,17 @@
         "selectedAttributes" : "[]",
         "elementScopeTags" : "[]",
         "useElementNameContains" : "true",
+        "useAllElementScopeTags" : "true",
         "element_id" : "1247572d-563f-3758-ac85-af471b11a58c",
         "elementScopeTypes" : "[]",
         "metricLimit" : "10",
+        "useAllMetricScopeTags" : "true",
         "metricAggs" : "[]",
         "elementScopeIds" : "[]",
         "elementScopeAttributes" : "[]",
         "showHighest" : "true",
-        "metric_fqn" : "netuitive.linux.diskspace.root.byte_percentused",
+        "metric_fqn" : "netuitive.linux.diskspace.avg_byte_percentused",
+        "metricScopeTags" : "[]",
         "width" : "auto",
         "metrics" : "[]",
         "selectedTab" : "table"
@@ -217,7 +220,7 @@
       "dashboardId" : null,
       "userId" : null,
       "created" : "2016-03-16T21:28:41Z",
-      "updated" : "2016-03-16T21:28:41Z"
+      "updated" : "2016-12-22T17:43:19Z"
     }, {
       "id" : "1faf4be1-dfb7-4a20-80e0-4b7840fa1204",
       "name" : "CPU Utilization",
