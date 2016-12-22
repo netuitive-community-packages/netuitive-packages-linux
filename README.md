@@ -1,4 +1,4 @@
-#netuitive.packages.linux 2.6.0
+#netuitive.packages.linux 2.6.1
 
 For detailed information on this package, please refer to the [online documentation](https://help.app.netuitive.com/Content/Misc/Datasources/Netuitive/new_netuitive_datasource.htm).
 
@@ -18,6 +18,10 @@ The following are the collectors that are enabled by default in the Netuitive Ag
 Additional collectors may be enabled; policies and configurations for those collectors will be package separately as they become available.
 
 ##Release History
+
+###Version 2.6.1
+
+* Bug fix: ensure element detail page always displays the correct disk utilization metric.
 
 ###Version 2.6.0
 
