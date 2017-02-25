@@ -1,4 +1,4 @@
-#netuitive.packages.linux 2.6.1
+#netuitive.packages.linux 2.7.0
 
 For detailed information on this package, please refer to the [online documentation](https://help.netuitive.com/Content/Integrations/linux.htm).
 
@@ -18,6 +18,10 @@ The following are the collectors that are enabled by default in the Netuitive Ag
 Additional collectors may be enabled; policies and configurations for those collectors will be package separately as they become available.
 
 ##Release History
+
+###Version 2.7.0
+
+* Updated gridstack dashboard layouts
 
 ###Version 2.6.1
 
