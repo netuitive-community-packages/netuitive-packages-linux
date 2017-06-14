@@ -60,11 +60,23 @@
         "correlation" : false
       }
     }, {
+      "match" : "netuitive.linux.diskspace\\.(.*)\\.byte_percentused_nonsuperuser",
+      "properties" : {
+        "baseline" : false,
+        "correlation" : false
+      }    
+    }, {
       "match" : "netuitive.linux.diskspace\\.avg_byte_percentused",
       "properties" : {
         "baseline" : true,
         "correlation" : true
       }
+    }, {
+      "match" : "netuitive.linux.diskspace\\.avg_byte_percentused_nonsuperuser",
+      "properties" : {
+        "baseline" : true,
+        "correlation" : true
+      }   
     }, {
       "match" : "netuitive.linux.iostat.max.util_percentage",
       "properties" : {
