@@ -68,11 +68,18 @@
         "fqn" : "netuitive.linux.network.${1}.errorspercent"
       }
     }, {
-      "match" : "netuitive.linux.diskspace.byte_percentused",
-      "properties" : {
-        "expression" : "100 - data['diskspace.${1}.byte_percentfree'].actual",
-        "for" : "diskspace.(.*).byte_percentfree",
-        "fqn" : "netuitive.linux.diskspace.${1}.byte_percentused"
+       "match":"netuitive.linux.diskspace.byte_percentused",
+       "properties":{
+         "expression":"100 - data['diskspace.${1}.byte_percentfree'].actual",
+         "for":"diskspace.(.*).byte_percentfree",
+         "fqn":"netuitive.linux.diskspace.${1}.byte_percentused"
+      }
+    }, {
+       "match":"netuitive.linux.diskspace.byte_percentused_nonsuperuser",
+       "properties":{
+         "expression":"100 - data['diskspace.${1}.byte_percentavailable'].actual",
+         "for":"diskspace.(.*).byte_percentavailable",
+         "fqn":"netuitive.linux.diskspace.${1}.byte_percentused_nonsuperuser"
       }
     }, {
       "match" : "netuitive.linux.loadavg.01.normalized",
@@ -118,6 +125,12 @@
       "properties" : {
         "expression" : "(data.count('diskspace\\..*\\..byte_percentfree') == null) || (data.count('diskspace\\..*\\..byte_percentfree') == 0) ? null : 100 - data.sum('diskspace\\..*\\..byte_percentfree') / data.count('diskspace\\..*\\..byte_percentfree')",
         "fqn" : "netuitive.linux.diskspace.avg_byte_percentused"
+      }
+    }, {
+       "match":"netuitive.linux.diskspace.avg_byte_percentused_nonsuperuser",
+       "properties":{
+        "expression":"(data.count('diskspace\\..*\\..byte_percentavailable') == null) || (data.count('diskspace\\..*\\..byte_percentavailable') == 0) ? null : 100 - data.sum('diskspace\\..*\\..byte_percentavailable') / data.count('diskspace\\..*\\..byte_percentavailable')",
+        "fqn":"netuitive.linux.diskspace.avg_byte_percentused_nonsuperuser"
       }
     } ]
   }
