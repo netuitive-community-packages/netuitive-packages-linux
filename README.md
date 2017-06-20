@@ -19,6 +19,8 @@ Additional collectors may be enabled; policies and configurations for those coll
 
 ## Release History
 
+* Add disk space percent used for non-superusers
+
 ### Version 2.7.1
 
 * Added computed metric for swap utilization
