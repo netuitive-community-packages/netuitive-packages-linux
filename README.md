@@ -19,6 +19,8 @@ Additional collectors may be enabled; policies and configurations for those coll
 
 ## Release History
 
+### Version 2.8.0
+
 * Add disk space percent used for non-superusers
 
 ### Version 2.7.1
