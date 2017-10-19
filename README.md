@@ -19,7 +19,7 @@ Additional collectors may be enabled; policies and configurations for those coll
 
 ## Release History
 
-### Version next
+### Version 2.9.0
 
 * Updated element details dashboard layout
 
