@@ -1,6 +1,6 @@
 {
   "id" : "netuitive.packages.linux",
-  "version" : "2.8.0",
+  "version" : "2.9.0",
   "manifest" : {
     "name" : "Netuitive Packages Linux",
     "description" : "A set of Netuitive analytics configurations, polices, dashboards, and reports that are used to monitor performance of the default collectors in the Netuitive Agent (CPU, DiskSpace, DiskUsage, LoadAverage, Memory, Network, VMStat)",
