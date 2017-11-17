@@ -19,7 +19,7 @@ Additional collectors may be enabled; policies and configurations for those coll
 
 ## Release History
 
-### Version next
+### Version 3.0.0
 
 * Converted single elementType to elementTypes array in policy scopes.
 * Updated "Linux - Agent Appears to be Down" policy to use new heartbeat check
