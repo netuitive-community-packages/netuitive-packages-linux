@@ -19,21 +19,26 @@ Additional collectors may be enabled; policies and configurations for those coll
 
 ## Release History
 
+### Version 3.0.0
+
+* Converted single elementType to elementTypes array in policy scopes.
+* Updated "Linux - Agent Appears to be Down" policy to use new heartbeat check
+
 ### Version 2.9.0
 
-* Updated element details dashboard layout
+* Updated element details dashboard layout.
 
 ### Version 2.8.0
 
-* Add disk space percent used for non-superusers
+* Add disk space percent used for non-superusers.
 
 ### Version 2.7.1
 
-* Added computed metric for swap utilization
+* Added computed metric for swap utilization.
 
 ### Version 2.7.0
 
-* Updated gridstack dashboard layouts
+* Updated gridstack dashboard layouts.
 
 ### Version 2.6.1
 
@@ -125,9 +130,9 @@ Additional collectors may be enabled; policies and configurations for those coll
 ### Version 2.0.0
 
 * Added units to all metrics.
-* Added new policy: "Linux - CPU Threshold Exceeded"
-* Added new policy: "Linux - Disk Utilization Threshold Exceeded"
-* Updated computed metric names for new naming convention
+* Added new policy: "Linux - CPU Threshold Exceeded".
+* Added new policy: "Linux - Disk Utilization Threshold Exceeded".
+* Updated computed metric names for new naming convention.
 
 ### Version 1.1.0
 

@@ -2,33 +2,26 @@
   "policy" : {
     "id" : null,
     "name" : "Linux - Agent Appears to be Down",
-    "description" : "A heartbeat has not been received for a Netuitive Agent for at least the past 15 minutes; the Agent may be down.",
+    "description" : "A heartbeat has not been received for a Netuitive Agent for at least the past two minutes; the Agent may be down.",
     "scope" : {
       "elementName" : null,
       "elementNameExclude" : null,
       "fqnIncludes" : [ ],
       "fqnExcludes" : [ ],
-      "elementType" : "SERVER",
+      "elementTypes" : ["SERVER"],
       "elementTags" : { }
     },
-    "duration" : 900,
-    "conditions" : [ {
-      "metric" : "netuitive.metrics.heartbeat",
-      "wildcard" : null,
-      "metricScopeTags" : { },
-      "analytic" : "actual",
-      "operator" : "!=",
-      "level" : 1.0,
-      "level2" : null,
-      "metricThresholdLevel" : null,
-      "metricThresholdAnalytic" : null
-    } ],
+    "duration" : 300,
+    "conditions" : [ ],
     "eventConditions" : [ ],
+    "checkCondition": {
+      "checkName": "heartbeat"
+    },
     "actions" : [ {
       "type" : "event",
       "category" : 2
     } ],
-    "enabled" : false,
+    "enabled" : true,
     "deleted" : false,
     "originTenantId" : null,
     "originPolicyId" : null,
