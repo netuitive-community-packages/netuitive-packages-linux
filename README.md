@@ -19,6 +19,10 @@ Additional collectors may be enabled; policies and configurations for those coll
 
 ## Release History
 
+### Version next
+
+* Updated Linux Summary dashboard widget layout.
+
 ### Version 3.0.0
 
 * Converted single elementType to elementTypes array in policy scopes.
