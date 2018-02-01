@@ -191,13 +191,9 @@
       "updated" : "2016-04-20T02:34:42Z"
     }, {
         "id": "bf72bc89-3235-4c3b-8c21-a7bb992f5f12",
-        "dashboardId": "306e8fd2-5e1c-4f70-be0e-025aa68188fb",
-        "userId": 26936,
         "name": "Top 5 Highest Utilized",
         "description": null,
         "widgetType": "metric-range",
-        "created": "2018-01-31T19:37:04Z",
-        "updated": "2018-01-31T19:37:04Z",
         "properties": {
           "visualization": "bar",
           "tableColumns": "[{\"columnType\":\"elementType\",\"width\":\"10%\"},{\"columnType\":\"elementName\",\"width\":\"80%\"},{\"columnType\":\"metric\",\"width\":\"10%\",\"metricDisplayName\":null,\"metricFqn\":null,\"metricAggFn\":null,\"metricAgg\":null,\"metricUnit\":null}]",
@@ -222,8 +218,8 @@
         },
       "dashboardId" : null,
       "userId" : null,
-      "created" : "2016-03-14T02:33:39Z",
-      "updated" : "2016-03-14T02:36:22Z"
+      "created": "2018-01-31T19:37:04Z",
+      "updated": "2018-01-31T19:37:04Z"
     } ],
     "type" : "DEFAULT",
     "private" : false
