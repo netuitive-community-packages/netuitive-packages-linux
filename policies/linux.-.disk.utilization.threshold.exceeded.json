@@ -1,38 +1,28 @@
 {
-  "policy" : {
-    "id" : null,
-    "name" : "Linux - Disk Utilization Threshold Exceeded",
-    "description" : "The consumed disk space on the SERVER instance has exceeded 95% for at least 15 minutes.",
-    "scope" : {
-      "elementName" : null,
-      "elementNameExclude" : null,
-      "fqnIncludes" : [ ],
-      "fqnExcludes" : [ ],
-      "elementTypes" : ["SERVER"],
-      "elementTags" : { }
+  "policy": {
+    "name": "Linux - Disk Utilization Threshold Exceeded",
+    "description": "The consumed disk space on the SERVER instance has exceeded 95% for at least 15 minutes.",
+    "scope": {
+      "elementTypes": [
+        "SERVER"
+      ]
     },
-    "duration" : 900,
-    "conditions" : [ {
-      "metric" : null,
-      "wildcard" : "netuitive.linux.diskspace.*.byte_percentused",
-      "metricScopeTags" : { },
-      "analytic" : "actual",
-      "operator" : ">",
-      "level" : 95.0,
-      "level2" : null,
-      "metricThresholdLevel" : null,
-      "metricThresholdAnalytic" : null
-    } ],
-    "eventConditions" : [ ],
-    "actions" : [ {
-      "type" : "event",
-      "category" : 3
-    } ],
-    "enabled" : true,
-    "deleted" : false,
-    "originTenantId" : null,
-    "originPolicyId" : null,
-    "creatorEmail" : null,
-    "lastUpdated" : null
+    "duration": 900,
+    "conditions": [
+      {
+        "wildcard": "netuitive.linux.diskspace.*.byte_percentused",
+        "analytic": "actual",
+        "operator": ">",
+        "level": 95
+      }
+    ],
+    "actions": [
+      {
+        "type": "event",
+        "category": 3
+      }
+    ],
+    "enabled": true,
+    "deleted": false
   }
 }

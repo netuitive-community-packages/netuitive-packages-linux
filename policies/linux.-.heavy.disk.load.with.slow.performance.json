@@ -1,68 +1,42 @@
 {
-  "policy" : {
-    "id" : null,
-    "name" : "Linux - Heavy Disk Load with Slow Performance",
-    "description" : "This is a CRITICAL event which indicates that the disk is not only experiencing heavy load, but performance is suffering.",
-    "scope" : {
-      "elementName" : null,
-      "elementNameExclude" : null,
-      "fqnIncludes" : [ ],
-      "fqnExcludes" : [ ],
-      "elementTypes" : ["SERVER"],
-      "elementTags" : { }
+  "policy": {
+    "name": "Linux - Heavy Disk Load with Slow Performance",
+    "description": "This is a CRITICAL event which indicates that the disk is not only experiencing heavy load, but performance is suffering.",
+    "scope": {
+      "elementTypes": [
+        "SERVER"
+      ]
     },
-    "duration" : 900,
-    "conditions" : [ {
-      "metric" : null,
-      "wildcard" : "iostat.*\\.await",
-      "metricScopeTags" : { },
-      "analytic" : "baselineDeviation",
-      "operator" : ">",
-      "level" : null,
-      "level2" : null,
-      "metricThresholdLevel" : null,
-      "metricThresholdAnalytic" : null
-    }, {
-      "metric" : null,
-      "wildcard" : "iostat.*\\.await",
-      "metricScopeTags" : { },
-      "analytic" : "contextualDeviation",
-      "operator" : ">",
-      "level" : null,
-      "level2" : null,
-      "metricThresholdLevel" : null,
-      "metricThresholdAnalytic" : null
-    }, {
-      "metric" : null,
-      "wildcard" : "iostat.*\\.average_queue_length",
-      "metricScopeTags" : { },
-      "analytic" : "baselineDeviation",
-      "operator" : "defined",
-      "level" : null,
-      "level2" : null,
-      "metricThresholdLevel" : null,
-      "metricThresholdAnalytic" : null
-    }, {
-      "metric" : null,
-      "wildcard" : "iostat.*\\.average_queue_length",
-      "metricScopeTags" : { },
-      "analytic" : "contextualDeviation",
-      "operator" : "defined",
-      "level" : null,
-      "level2" : null,
-      "metricThresholdLevel" : null,
-      "metricThresholdAnalytic" : null
-    } ],
-    "eventConditions" : [ ],
-    "actions" : [ {
-      "type" : "event",
-      "category" : 3
-    } ],
-    "enabled" : true,
-    "deleted" : false,
-    "originTenantId" : null,
-    "originPolicyId" : null,
-    "creatorEmail" : null,
-    "lastUpdated" : null
+    "duration": 900,
+    "conditions": [
+      {
+        "wildcard": "iostat.*\\.await",
+        "analytic": "baselineDeviation",
+        "operator": ">"
+      },
+      {
+        "wildcard": "iostat.*\\.await",
+        "analytic": "contextualDeviation",
+        "operator": ">"
+      },
+      {
+        "wildcard": "iostat.*\\.average_queue_length",
+        "analytic": "baselineDeviation",
+        "operator": "defined"
+      },
+      {
+        "wildcard": "iostat.*\\.average_queue_length",
+        "analytic": "contextualDeviation",
+        "operator": "defined"
+      }
+    ],
+    "actions": [
+      {
+        "type": "event",
+        "category": 3
+      }
+    ],
+    "enabled": true,
+    "deleted": false
   }
 }
