@@ -19,6 +19,10 @@ Additional collectors may be enabled; policies and configurations for those coll
 
 ## Release History
 
+### Version next
+
+* Updated heartbeat policy title and description.
+
 ### Version 3.1.0
 
 * Updated Linux Summary dashboard widget layout.
