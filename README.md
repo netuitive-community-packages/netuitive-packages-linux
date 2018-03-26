@@ -19,7 +19,7 @@ Additional collectors may be enabled; policies and configurations for those coll
 
 ## Release History
 
-### Version next
+### Version 3.1.1
 
 * Updated heartbeat policy title and description.
 
