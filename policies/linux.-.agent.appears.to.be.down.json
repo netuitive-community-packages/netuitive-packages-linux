@@ -1,8 +1,8 @@
 {
   "policy" : {
     "id" : null,
-    "name" : "Linux - Agent Appears to be Down",
-    "description" : "A heartbeat has not been received for a Netuitive Agent for at least the past two minutes; the Agent may be down.",
+    "name" : "Linux - Heartbeat Check Expired",
+    "description" : "A heartbeat has not been received from a Linux Agent for at least the past two minutes. Confirm the agent is running and that there are not any network issues which may be preventing the check from reaching Metricly in time. If the issue is persistent, consider increasing the heartbeat ttl setting to allow more time for the check to reach Metricly.",
     "scope" : {
       "elementName" : null,
       "elementNameExclude" : null,
