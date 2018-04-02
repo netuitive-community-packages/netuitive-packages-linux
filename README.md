@@ -22,6 +22,7 @@ Additional collectors may be enabled; policies and configurations for those coll
 ### Version next
 
 * Adjusted build to use metricly-cli for validation
+* Updated cpu threshold exceeded policy description
 
 ### Version 3.1.1
 
