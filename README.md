@@ -19,6 +19,10 @@ Additional collectors may be enabled; policies and configurations for those coll
 
 ## Release History
 
+### Version next
+
+* Adjusted build to use metricly-cli for validation
+
 ### Version 3.1.1
 
 * Updated heartbeat policy title and description.
