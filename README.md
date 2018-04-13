@@ -23,6 +23,7 @@ Additional collectors may be enabled; policies and configurations for those coll
 
 * Adjusted build to use metricly-cli for validation
 * Updated cpu threshold exceeded policy description
+* Applied bytes unit to diskspace bytes used, free, and avail metrics
 
 ### Version 3.1.1
 
