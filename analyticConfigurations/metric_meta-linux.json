@@ -133,6 +133,13 @@
         "statistic" : "sum"
       }
     }, {
+      "match" : "diskspace\\..*\\.byte_(used|free|avail)",
+      "properties" : {
+        "tags" : {
+          "unit" : "bytes"
+        }
+      }
+    }, {
       "match" : "network\\..*bit",
       "properties" : {
         "tags" : {

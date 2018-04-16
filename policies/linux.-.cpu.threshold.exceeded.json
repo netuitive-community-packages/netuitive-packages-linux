@@ -2,7 +2,7 @@
   "policy" : {
     "id" : null,
     "name" : "Linux - CPU Threshold Exceeded",
-    "description" : "The CPU on the SERVER instance has exceeded 95% for at least 15 minutes.",
+    "description" : "The CPU on the SERVER instance has exceeded 95% for at least 15 minutes. The metric netuitive.linux.cpu.total.utilization.percent factors in cpu steal as part of its computation. Check cpu.total.steal for the instance. If the value is high, it could mean a neighboring virtual machine is hogging the physical cpu. For instances running in AWS, stopping and starting the EC2 should resolve the issue as the virtual machine is moved to a different hypervisor.",
     "scope" : {
       "elementName" : null,
       "elementNameExclude" : null,
