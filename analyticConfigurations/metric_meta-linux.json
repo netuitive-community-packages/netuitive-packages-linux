@@ -265,6 +265,13 @@
         }
       }
     }, {
+      "match" : "cpu\\.total\\.iowait",
+      "properties" : {
+        "tags" : {
+          "utilization" : true
+        }
+      }
+    }, {
       "match" : "netuitive.linux.iostat.max_util_percentage",
       "properties" : {
         "tags" : {
