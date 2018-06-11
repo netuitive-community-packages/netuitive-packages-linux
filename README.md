@@ -19,7 +19,7 @@ Additional collectors may be enabled; policies and configurations for those coll
 
 ## Release History
 
-### Version next
+### Version 3.3.0
 
 * Tagged cpu.total.iowait as a utilization metric.
 
