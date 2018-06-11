@@ -19,6 +19,10 @@ Additional collectors may be enabled; policies and configurations for those coll
 
 ## Release History
 
+### Version 3.3.0
+
+* Tagged cpu.total.iowait as a utilization metric.
+
 ### Version 3.2.0
 
 * Adjusted build to use metricly-cli for validation
