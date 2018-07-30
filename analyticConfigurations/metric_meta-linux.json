@@ -186,7 +186,7 @@
           "unit" : "bytes"
         }
       }
-    }  {
+    }, {
       "match" : "iostat\\..*\\.io",
       "properties" : {
         "STATISTIC" : "sum"
