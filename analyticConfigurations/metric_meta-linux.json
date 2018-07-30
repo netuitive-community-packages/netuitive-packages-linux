@@ -171,6 +171,22 @@
         "STATISTIC" : "sum"
       }
     }, {
+      "match" : "netuitive.linux.network\\..*\\.total_byte",
+      "properties" : {
+        "STATISTIC" : "sum",
+        "tags" : {
+          "unit" : "bytes"
+        }
+      }
+    }, {
+      "match" : "netuitive.linux.network.total_byte_all_nics",
+      "properties" : {
+        "STATISTIC" : "sum",
+        "tags" : {
+          "unit" : "bytes"
+        }
+      }
+    }  {
       "match" : "iostat\\..*\\.io",
       "properties" : {
         "STATISTIC" : "sum"

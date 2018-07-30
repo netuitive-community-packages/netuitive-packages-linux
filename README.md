@@ -19,6 +19,10 @@ Additional collectors may be enabled; policies and configurations for those coll
 
 ## Release History
 
+### Version next
+
+* Added computed metrics for network bytes transmitted per NIC and total.
+
 ### Version 3.3.0
 
 * Tagged cpu.total.iowait as a utilization metric.
