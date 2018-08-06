@@ -1,10 +1,5 @@
 {
   "analyticConfiguration": {
-    "type": "ACE",
-    "name": "Linux",
-    "scope": {
-      "metricMatches": "^(cpu\\.total\\.|diskspace\\.|iostat\\.|loadavg\\.|memory\\.Mem.*|network\\..*\\.(tx_|rx_)|vmstat\\.).*"
-    },
     "metrics": [
       {
         "match": "netuitive.linux.memory.utilizationpercent",
@@ -90,6 +85,11 @@
           "correlation": true
         }
       }
-    ]
+    ],
+    "name": "Linux",
+    "scope": {
+      "metricMatches": "^(cpu\\.total\\.|diskspace\\.|iostat\\.|loadavg\\.|memory\\.Mem.*|network\\..*\\.(tx_|rx_)|vmstat\\.).*"
+    },
+    "type": "ACE"
   }
 }

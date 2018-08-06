@@ -1,10 +1,5 @@
 {
   "analyticConfiguration": {
-    "type": "COMPUTED_METRIC",
-    "name": "Linux",
-    "scope": {
-      "metricMatches": "^(cpu\\.total\\.|diskspace\\.|iostat\\.|loadavg\\.|memory\\.Mem.*|network\\..*\\.(tx_|rx_)|vmstat\\.).*"
-    },
     "metrics": [
       {
         "match": "netuitive.linux.memory.utilizationpercent",
@@ -145,6 +140,11 @@
           "fqn": "netuitive.linux.diskspace.avg_byte_percentused_nonsuperuser"
         }
       }
-    ]
+    ],
+    "name": "Linux",
+    "scope": {
+      "metricMatches": "^(cpu\\.total\\.|diskspace\\.|iostat\\.|loadavg\\.|memory\\.Mem.*|network\\..*\\.(tx_|rx_)|vmstat\\.).*"
+    },
+    "type": "COMPUTED_METRIC"
   }
 }

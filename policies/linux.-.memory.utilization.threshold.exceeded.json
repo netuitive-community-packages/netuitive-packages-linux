@@ -1,28 +1,28 @@
 {
   "policy": {
-    "name": "Linux - Memory Utilization Threshold Exceeded",
+    "actions": [
+      {
+        "category": 3,
+        "type": "event"
+      }
+    ],
+    "conditions": [
+      {
+        "analytic": "actual",
+        "level": 95,
+        "metric": "netuitive.linux.memory.utilizationpercent",
+        "operator": ">"
+      }
+    ],
+    "deleted": false,
     "description": "This is a CRITICAL event which is raised when memory utilization exceeds 95%.",
+    "duration": 900,
+    "enabled": true,
+    "name": "Linux - Memory Utilization Threshold Exceeded",
     "scope": {
       "elementTypes": [
         "SERVER"
       ]
-    },
-    "duration": 900,
-    "conditions": [
-      {
-        "metric": "netuitive.linux.memory.utilizationpercent",
-        "analytic": "actual",
-        "operator": ">",
-        "level": 95
-      }
-    ],
-    "actions": [
-      {
-        "type": "event",
-        "category": 3
-      }
-    ],
-    "enabled": true,
-    "deleted": false
+    }
   }
 }

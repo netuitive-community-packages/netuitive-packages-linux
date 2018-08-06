@@ -1,33 +1,33 @@
 {
   "policy": {
-    "name": "Linux - Elevated Memory Usage",
+    "actions": [
+      {
+        "category": 1,
+        "type": "event"
+      }
+    ],
+    "conditions": [
+      {
+        "analytic": "baselineDeviation",
+        "metric": "netuitive.linux.memory.utilizationpercent",
+        "operator": ">"
+      },
+      {
+        "analytic": "actual",
+        "level": 50,
+        "metric": "netuitive.linux.memory.utilizationpercent",
+        "operator": ">="
+      }
+    ],
+    "deleted": false,
     "description": "This policy will generate an Informational event when memory usage is higher than normal, but only if the actual value is also above 50%. Customers typically don't want to be informed of deviations in memory usage when the actual values are too low; you may want to tune the 50% threshold for your environment.",
+    "duration": 1800,
+    "enabled": true,
+    "name": "Linux - Elevated Memory Usage",
     "scope": {
       "elementTypes": [
         "SERVER"
       ]
-    },
-    "duration": 1800,
-    "conditions": [
-      {
-        "metric": "netuitive.linux.memory.utilizationpercent",
-        "analytic": "baselineDeviation",
-        "operator": ">"
-      },
-      {
-        "metric": "netuitive.linux.memory.utilizationpercent",
-        "analytic": "actual",
-        "operator": ">=",
-        "level": 50
-      }
-    ],
-    "actions": [
-      {
-        "type": "event",
-        "category": 1
-      }
-    ],
-    "enabled": true,
-    "deleted": false
+    }
   }
 }

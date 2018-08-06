@@ -1,38 +1,38 @@
 {
   "policy": {
-    "name": "Linux - Heavy CPU Load",
+    "actions": [
+      {
+        "category": 3,
+        "type": "event"
+      }
+    ],
+    "conditions": [
+      {
+        "analytic": "baselineDeviation",
+        "metric": "netuitive.linux.cpu.total.utilization.percent",
+        "operator": ">"
+      },
+      {
+        "analytic": "contextualDeviation",
+        "metric": "netuitive.linux.cpu.total.utilization.percent",
+        "operator": ">"
+      },
+      {
+        "analytic": "actual",
+        "level": 2,
+        "metric": "netuitive.linux.loadavg.05.normalized",
+        "operator": ">"
+      }
+    ],
+    "deleted": false,
     "description": "This is a CRITICAL event indicating that the server's CPU is under heavy load, based upon upper deviations on CPU utilization percent and the normalized loadavg.05 metric being greater than 2.  Rule of thumb is that the run queue size (represented by the loadavg) should not be greater than 2x the number of CPUs.",
+    "duration": 900,
+    "enabled": true,
+    "name": "Linux - Heavy CPU Load",
     "scope": {
       "elementTypes": [
         "SERVER"
       ]
-    },
-    "duration": 900,
-    "conditions": [
-      {
-        "metric": "netuitive.linux.cpu.total.utilization.percent",
-        "analytic": "baselineDeviation",
-        "operator": ">"
-      },
-      {
-        "metric": "netuitive.linux.cpu.total.utilization.percent",
-        "analytic": "contextualDeviation",
-        "operator": ">"
-      },
-      {
-        "metric": "netuitive.linux.loadavg.05.normalized",
-        "analytic": "actual",
-        "operator": ">",
-        "level": 2
-      }
-    ],
-    "actions": [
-      {
-        "type": "event",
-        "category": 3
-      }
-    ],
-    "enabled": true,
-    "deleted": false
+    }
   }
 }

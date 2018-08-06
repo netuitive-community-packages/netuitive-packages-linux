@@ -1,42 +1,42 @@
 {
   "policy": {
-    "name": "Linux - Heavy Disk Load with Slow Performance",
+    "actions": [
+      {
+        "category": 3,
+        "type": "event"
+      }
+    ],
+    "conditions": [
+      {
+        "analytic": "baselineDeviation",
+        "operator": ">",
+        "wildcard": "iostat.*\\.await"
+      },
+      {
+        "analytic": "contextualDeviation",
+        "operator": ">",
+        "wildcard": "iostat.*\\.await"
+      },
+      {
+        "analytic": "baselineDeviation",
+        "operator": "defined",
+        "wildcard": "iostat.*\\.average_queue_length"
+      },
+      {
+        "analytic": "contextualDeviation",
+        "operator": "defined",
+        "wildcard": "iostat.*\\.average_queue_length"
+      }
+    ],
+    "deleted": false,
     "description": "This is a CRITICAL event which indicates that the disk is not only experiencing heavy load, but performance is suffering.",
+    "duration": 900,
+    "enabled": true,
+    "name": "Linux - Heavy Disk Load with Slow Performance",
     "scope": {
       "elementTypes": [
         "SERVER"
       ]
-    },
-    "duration": 900,
-    "conditions": [
-      {
-        "wildcard": "iostat.*\\.await",
-        "analytic": "baselineDeviation",
-        "operator": ">"
-      },
-      {
-        "wildcard": "iostat.*\\.await",
-        "analytic": "contextualDeviation",
-        "operator": ">"
-      },
-      {
-        "wildcard": "iostat.*\\.average_queue_length",
-        "analytic": "baselineDeviation",
-        "operator": "defined"
-      },
-      {
-        "wildcard": "iostat.*\\.average_queue_length",
-        "analytic": "contextualDeviation",
-        "operator": "defined"
-      }
-    ],
-    "actions": [
-      {
-        "type": "event",
-        "category": 3
-      }
-    ],
-    "enabled": true,
-    "deleted": false
+    }
   }
 }

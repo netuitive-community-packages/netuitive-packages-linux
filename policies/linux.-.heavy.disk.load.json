@@ -1,32 +1,32 @@
 {
   "policy": {
-    "name": "Linux - Heavy Disk Load",
+    "actions": [
+      {
+        "category": 2,
+        "type": "event"
+      }
+    ],
+    "conditions": [
+      {
+        "analytic": "baselineDeviation",
+        "operator": ">",
+        "wildcard": "iostat.*\\.average_queue_length"
+      },
+      {
+        "analytic": "contextualDeviation",
+        "operator": ">",
+        "wildcard": "iostat.*\\.average_queue_length"
+      }
+    ],
+    "deleted": false,
     "description": "This is a WARNING which indicates that the disk is experiencing heavy load, but performance has not yet been impacted.",
+    "duration": 900,
+    "enabled": true,
+    "name": "Linux - Heavy Disk Load",
     "scope": {
       "elementTypes": [
         "SERVER"
       ]
-    },
-    "duration": 900,
-    "conditions": [
-      {
-        "wildcard": "iostat.*\\.average_queue_length",
-        "analytic": "baselineDeviation",
-        "operator": ">"
-      },
-      {
-        "wildcard": "iostat.*\\.average_queue_length",
-        "analytic": "contextualDeviation",
-        "operator": ">"
-      }
-    ],
-    "actions": [
-      {
-        "type": "event",
-        "category": 2
-      }
-    ],
-    "enabled": true,
-    "deleted": false
+    }
   }
 }

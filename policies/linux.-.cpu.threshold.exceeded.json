@@ -1,28 +1,28 @@
 {
   "policy": {
-    "name": "Linux - CPU Threshold Exceeded",
+    "actions": [
+      {
+        "category": 3,
+        "type": "event"
+      }
+    ],
+    "conditions": [
+      {
+        "analytic": "actual",
+        "level": 95,
+        "metric": "netuitive.linux.cpu.total.utilization.percent",
+        "operator": ">"
+      }
+    ],
+    "deleted": false,
     "description": "The CPU on the SERVER instance has exceeded 95% for at least 15 minutes.",
+    "duration": 900,
+    "enabled": true,
+    "name": "Linux - CPU Threshold Exceeded",
     "scope": {
       "elementTypes": [
         "SERVER"
       ]
-    },
-    "duration": 900,
-    "conditions": [
-      {
-        "metric": "netuitive.linux.cpu.total.utilization.percent",
-        "analytic": "actual",
-        "operator": ">",
-        "level": 95
-      }
-    ],
-    "actions": [
-      {
-        "type": "event",
-        "category": 3
-      }
-    ],
-    "enabled": true,
-    "deleted": false
+    }
   }
 }

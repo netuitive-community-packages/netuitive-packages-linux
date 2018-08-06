@@ -1,209 +1,145 @@
 {
   "dashboard": {
     "name": "Linux Element Detail",
+    "private": false,
     "properties": {
-      "timeRangeDuration": "3600",
       "gridstackContents": "[{\"id\":\"3e520555-3fe8-4333-9b24-6e58ade95ec6\",\"x\":6,\"y\":18,\"width\":6,\"height\":9},{\"id\":\"b4abc590-47ec-4932-ab7e-d5610d5df4d3\",\"x\":0,\"y\":27,\"width\":12,\"height\":10},{\"id\":\"1a5fae83-3ad1-4fdd-85d2-d0b79ee8585e\",\"x\":0,\"y\":0,\"width\":4,\"height\":9},{\"id\":\"6952af6d-0960-423c-b941-c0679252a94d\",\"x\":0,\"y\":18,\"width\":6,\"height\":9},{\"id\":\"6c0c7966-0e5c-4a4b-9738-22a8a88bdf10\",\"x\":8,\"y\":0,\"width\":4,\"height\":9},{\"id\":\"2ccd0c21-65d9-4d52-9728-c8efbdfb912f\",\"x\":4,\"y\":9,\"width\":4,\"height\":9},{\"id\":\"f1f548dc-0056-4a50-a588-2980898d5f94\",\"x\":8,\"y\":9,\"width\":4,\"height\":9},{\"id\":\"1faf4be1-dfb7-4a20-80e0-4b7840fa1204\",\"x\":4,\"y\":0,\"width\":4,\"height\":9},{\"id\":\"851f5c7b-7548-457d-905b-ab1a55dc750b\",\"x\":0,\"y\":9,\"width\":4,\"height\":9}]",
       "refreshIntervalSeconds": "300",
+      "timeRangeDuration": "3600",
       "wrap": "true"
     },
+    "type": "SERVER",
     "widgets": [
       {
         "id": "3e520555-3fe8-4333-9b24-6e58ade95ec6",
         "name": "Tags",
-        "widgetType": "element-tags",
         "properties": {
-          "showElementTotal": "true",
-          "selectedAttributes": "[]",
-          "elementScopeTags": "[]",
-          "useElementNameContains": "true",
-          "elementScopeTypes": "[]",
           "metricLimit": "10",
-          "metricAggs": "[]",
-          "elementScopeIds": "[]",
-          "elementScopeAttributes": "[]",
+          "selectedTab": "table",
+          "showElementTotal": "true",
           "showHighest": "true",
-          "width": "auto",
-          "metrics": "[]",
-          "selectedTab": "table"
-        }
+          "useElementNameContains": "true",
+          "width": "auto"
+        },
+        "widgetType": "element-tags"
       },
       {
         "id": "b4abc590-47ec-4932-ab7e-d5610d5df4d3",
         "name": "Events",
-        "widgetType": "event-ticker",
         "properties": {
-          "showElementTotal": "true",
-          "selectedAttributes": "[]",
-          "elementScopeTags": "[]",
-          "useElementNameContains": "true",
-          "useAllElementScopeTags": "false",
           "elementScopeTypes": "[\"SERVER\"]",
           "metricLimit": "10",
-          "useAllMetricScopeTags": "false",
-          "metricAggs": "[]",
-          "elementScopeIds": "[]",
-          "elementScopeAttributes": "[]",
-          "elementNameContains": "",
+          "selectedTab": "table",
+          "showElementTotal": "true",
           "showHighest": "true",
-          "metricScopeTags": "[]",
-          "width": "medium",
-          "metrics": "[]",
-          "selectedTab": "table"
-        }
+          "useAllElementScopeTags": "false",
+          "useAllMetricScopeTags": "false",
+          "useElementNameContains": "true",
+          "width": "medium"
+        },
+        "widgetType": "event-ticker"
       },
       {
         "id": "1a5fae83-3ad1-4fdd-85d2-d0b79ee8585e",
         "name": "Current CPU Utilization",
-        "widgetType": "metric-status",
         "properties": {
-          "visualization": "gauge",
-          "showElementTotal": "true",
-          "selectedAttributes": "[]",
-          "elementScopeTags": "[]",
-          "useElementNameContains": "true",
-          "elementScopeTypes": "[]",
           "metricLimit": "10",
-          "metricAggs": "[]",
-          "elementScopeIds": "[]",
-          "elementScopeAttributes": "[]",
-          "showHighest": "true",
           "metric_fqn": "netuitive.linux.cpu.total.utilization.percent",
-          "width": "auto",
-          "metrics": "[]",
-          "selectedTab": "table"
-        }
+          "selectedTab": "table",
+          "showElementTotal": "true",
+          "showHighest": "true",
+          "useElementNameContains": "true",
+          "visualization": "gauge",
+          "width": "auto"
+        },
+        "widgetType": "metric-status"
       },
       {
         "id": "6952af6d-0960-423c-b941-c0679252a94d",
         "name": "Attributes",
-        "widgetType": "element-attributes",
         "properties": {
-          "showElementTotal": "true",
-          "selectedAttributes": "[]",
-          "elementScopeTags": "[]",
-          "useElementNameContains": "true",
-          "elementScopeTypes": "[]",
           "metricLimit": "10",
-          "metricAggs": "[]",
-          "elementScopeIds": "[]",
-          "elementScopeAttributes": "[]",
+          "selectedTab": "table",
+          "showElementTotal": "true",
           "showHighest": "true",
-          "width": "auto",
-          "metrics": "[]",
-          "selectedTab": "table"
-        }
+          "useElementNameContains": "true",
+          "width": "auto"
+        },
+        "widgetType": "element-attributes"
       },
       {
         "id": "6c0c7966-0e5c-4a4b-9738-22a8a88bdf10",
         "name": "CPU Breakdown",
-        "widgetType": "cpu-usage",
         "properties": {
-          "showElementTotal": "true",
-          "selectedAttributes": "[]",
-          "elementScopeTags": "[]",
-          "useElementNameContains": "true",
-          "elementScopeTypes": "[]",
           "metricLimit": "10",
-          "metricAggs": "[]",
-          "elementScopeIds": "[]",
-          "elementScopeAttributes": "[]",
+          "selectedTab": "table",
+          "showElementTotal": "true",
           "showHighest": "true",
-          "width": "auto",
-          "metrics": "[]",
-          "selectedTab": "table"
-        }
+          "useElementNameContains": "true",
+          "width": "auto"
+        },
+        "widgetType": "cpu-usage"
       },
       {
         "id": "2ccd0c21-65d9-4d52-9728-c8efbdfb912f",
         "name": "Memory Breakdown",
-        "widgetType": "memory-usage",
         "properties": {
-          "showElementTotal": "true",
-          "selectedAttributes": "[]",
-          "elementScopeTags": "[]",
-          "useElementNameContains": "true",
-          "elementScopeTypes": "[]",
           "metricLimit": "10",
-          "metricAggs": "[]",
-          "elementScopeIds": "[]",
-          "elementScopeAttributes": "[]",
+          "selectedTab": "table",
+          "showElementTotal": "true",
           "showHighest": "true",
-          "width": "medium",
-          "metrics": "[]",
-          "selectedTab": "table"
-        }
+          "useElementNameContains": "true",
+          "width": "medium"
+        },
+        "widgetType": "memory-usage"
       },
       {
         "id": "f1f548dc-0056-4a50-a588-2980898d5f94",
         "name": "Current Disk Utilization",
-        "widgetType": "metric-status",
         "properties": {
-          "visualization": "gauge",
-          "showElementTotal": "true",
-          "selectedAttributes": "[]",
-          "elementScopeTags": "[]",
-          "useElementNameContains": "true",
-          "useAllElementScopeTags": "true",
-          "elementScopeTypes": "[]",
           "metricLimit": "10",
-          "useAllMetricScopeTags": "true",
-          "metricAggs": "[]",
-          "elementScopeIds": "[]",
-          "elementScopeAttributes": "[]",
-          "showHighest": "true",
           "metric_fqn": "netuitive.linux.diskspace.avg_byte_percentused",
-          "metricScopeTags": "[]",
-          "width": "auto",
-          "metrics": "[]",
-          "selectedTab": "table"
-        }
+          "selectedTab": "table",
+          "showElementTotal": "true",
+          "showHighest": "true",
+          "useAllElementScopeTags": "true",
+          "useAllMetricScopeTags": "true",
+          "useElementNameContains": "true",
+          "visualization": "gauge",
+          "width": "auto"
+        },
+        "widgetType": "metric-status"
       },
       {
         "id": "1faf4be1-dfb7-4a20-80e0-4b7840fa1204",
         "name": "CPU Utilization",
-        "widgetType": "metric-time-series",
         "properties": {
-          "showElementTotal": "true",
-          "selectedAttributes": "[]",
-          "elementScopeTags": "[]",
-          "useElementNameContains": "true",
-          "elementScopeTypes": "[]",
-          "metricLimit": "10",
           "metricAggs": "[\"avg\"]",
-          "elementScopeIds": "[]",
-          "elementScopeAttributes": "[]",
-          "showHighest": "true",
+          "metricLimit": "10",
           "metric_fqn": "netuitive.linux.cpu.total.utilization.percent",
-          "width": "medium",
-          "metrics": "[]",
-          "selectedTab": "table"
-        }
+          "selectedTab": "table",
+          "showElementTotal": "true",
+          "showHighest": "true",
+          "useElementNameContains": "true",
+          "width": "medium"
+        },
+        "widgetType": "metric-time-series"
       },
       {
         "id": "851f5c7b-7548-457d-905b-ab1a55dc750b",
         "name": "Current Memory Utilization",
-        "widgetType": "metric-status",
         "properties": {
-          "visualization": "gauge",
-          "showElementTotal": "true",
-          "selectedAttributes": "[]",
-          "elementScopeTags": "[]",
-          "useElementNameContains": "true",
-          "elementScopeTypes": "[]",
           "metricLimit": "10",
-          "metricAggs": "[]",
-          "elementScopeIds": "[]",
-          "elementScopeAttributes": "[]",
-          "showHighest": "true",
           "metric_fqn": "netuitive.linux.memory.utilizationpercent",
-          "width": "auto",
-          "metrics": "[]",
-          "selectedTab": "table"
-        }
+          "selectedTab": "table",
+          "showElementTotal": "true",
+          "showHighest": "true",
+          "useElementNameContains": "true",
+          "visualization": "gauge",
+          "width": "auto"
+        },
+        "widgetType": "metric-status"
       }
-    ],
-    "type": "SERVER",
-    "private": false
+    ]
   }
 }

@@ -1,178 +1,141 @@
 {
   "dashboard": {
-    "name": "Linux Summary",
-    "properties": {
-      "timeRangeDuration": "3600",
-      "density": "normal",
-      "refreshIntervalSeconds": "300",
-      "wrap": "true",
-      "gridstackContents": "[{\"id\":\"9e030328-626a-4d1c-9436-6f14a38d2c15\",\"x\":0,\"y\":9,\"width\":4,\"height\":9},{\"id\":\"d2a6970c-e0a7-4850-b7b7-a5a67d8f7f90\",\"x\":8,\"y\":9,\"width\":4,\"height\":9},{\"id\":\"4764b195-9d48-4f0f-a7ba-47c74167b88e\",\"x\":6,\"y\":18,\"width\":6,\"height\":8},{\"id\":\"c4d35102-159d-4c10-ab79-11b842a15696\",\"x\":4,\"y\":9,\"width\":4,\"height\":9},{\"id\":\"9199dfc5-52ce-49bc-b839-1e10dd854822\",\"x\":4,\"y\":0,\"width\":8,\"height\":9},{\"id\":\"37b7ab07-e34a-43c3-8a70-7742579bcc9b\",\"x\":0,\"y\":18,\"width\":6,\"height\":8},{\"id\":\"bf72bc89-3235-4c3b-8c21-a7bb992f5f12\",\"x\":0,\"y\":0,\"width\":4,\"height\":9}]"
-    },
     "created": "2016-02-22T22:38:25Z",
+    "name": "Linux Summary",
+    "private": false,
+    "properties": {
+      "density": "normal",
+      "gridstackContents": "[{\"id\":\"9e030328-626a-4d1c-9436-6f14a38d2c15\",\"x\":0,\"y\":9,\"width\":4,\"height\":9},{\"id\":\"d2a6970c-e0a7-4850-b7b7-a5a67d8f7f90\",\"x\":8,\"y\":9,\"width\":4,\"height\":9},{\"id\":\"4764b195-9d48-4f0f-a7ba-47c74167b88e\",\"x\":6,\"y\":18,\"width\":6,\"height\":8},{\"id\":\"c4d35102-159d-4c10-ab79-11b842a15696\",\"x\":4,\"y\":9,\"width\":4,\"height\":9},{\"id\":\"9199dfc5-52ce-49bc-b839-1e10dd854822\",\"x\":4,\"y\":0,\"width\":8,\"height\":9},{\"id\":\"37b7ab07-e34a-43c3-8a70-7742579bcc9b\",\"x\":0,\"y\":18,\"width\":6,\"height\":8},{\"id\":\"bf72bc89-3235-4c3b-8c21-a7bb992f5f12\",\"x\":0,\"y\":0,\"width\":4,\"height\":9}]",
+      "refreshIntervalSeconds": "300",
+      "timeRangeDuration": "3600",
+      "wrap": "true"
+    },
+    "type": "DEFAULT",
     "updated": "2016-04-20T02:38:00Z",
     "widgets": [
       {
+        "created": "2016-04-20T02:37:53Z",
         "id": "9e030328-626a-4d1c-9436-6f14a38d2c15",
         "name": "Memory Utilization By Element",
-        "widgetType": "multi-metric-time-series",
         "properties": {
-          "showElementTotal": "true",
-          "selectedAttributes": "[]",
-          "elementScopeTags": "[]",
-          "useElementNameContains": "true",
           "elementScopeTypes": "[\"SERVER\"]",
           "metricLimit": "10",
-          "metricAggs": "[]",
-          "elementScopeIds": "[]",
-          "elementScopeAttributes": "[]",
-          "showHighest": "true",
-          "width": "auto",
           "metrics": "[{\"fqn\":\"netuitive.linux.memory.utilizationpercent\",\"aggFns\":[]}]",
-          "selectedTab": "table"
+          "selectedTab": "table",
+          "showElementTotal": "true",
+          "showHighest": "true",
+          "useElementNameContains": "true",
+          "width": "auto"
         },
-        "created": "2016-04-20T02:37:53Z",
-        "updated": "2016-04-20T02:37:53Z"
+        "updated": "2016-04-20T02:37:53Z",
+        "widgetType": "multi-metric-time-series"
       },
       {
+        "created": "2016-02-22T22:56:17Z",
         "id": "d2a6970c-e0a7-4850-b7b7-a5a67d8f7f90",
         "name": "Total Network Out by Element",
-        "widgetType": "multi-metric-time-series",
         "properties": {
-          "showElementTotal": "true",
-          "selectedAttributes": "[]",
-          "elementScopeTags": "[]",
-          "useElementNameContains": "true",
           "elementScopeTypes": "[\"SERVER\"]",
           "metricLimit": "10",
-          "metricAggs": "[]",
-          "elementScopeIds": "[]",
-          "elementScopeAttributes": "[]",
-          "showHighest": "true",
-          "width": "auto",
           "metrics": "[{\"fqn\":\"network.eth0.tx_byte\",\"aggFns\":[]}]",
-          "selectedTab": "table"
+          "selectedTab": "table",
+          "showElementTotal": "true",
+          "showHighest": "true",
+          "useElementNameContains": "true",
+          "width": "auto"
         },
-        "created": "2016-02-22T22:56:17Z",
-        "updated": "2016-04-20T02:32:35Z"
+        "updated": "2016-04-20T02:32:35Z",
+        "widgetType": "multi-metric-time-series"
       },
       {
+        "created": "2016-02-22T22:57:56Z",
         "id": "4764b195-9d48-4f0f-a7ba-47c74167b88e",
         "name": "Total Disk Writes by Element",
-        "widgetType": "multi-metric-time-series",
         "properties": {
-          "showElementTotal": "true",
-          "selectedAttributes": "[]",
-          "elementScopeTags": "[]",
-          "useElementNameContains": "true",
           "elementScopeTypes": "[\"SERVER\"]",
           "metricLimit": "10",
-          "metricAggs": "[]",
-          "elementScopeIds": "[]",
-          "elementScopeAttributes": "[]",
-          "showHighest": "true",
-          "width": "auto",
           "metrics": "[{\"fqn\":\"netuitive.linux.iostat.total.writes_byte\",\"aggFns\":[]},{\"fqn\":\"netuitive.linux.iostat.totalwrites\",\"aggFns\":[]}]",
-          "selectedTab": "table"
+          "selectedTab": "table",
+          "showElementTotal": "true",
+          "showHighest": "true",
+          "useElementNameContains": "true",
+          "width": "auto"
         },
-        "created": "2016-02-22T22:57:56Z",
-        "updated": "2016-04-20T02:35:41Z"
+        "updated": "2016-04-20T02:35:41Z",
+        "widgetType": "multi-metric-time-series"
       },
       {
+        "created": "2016-02-22T22:55:22Z",
         "id": "c4d35102-159d-4c10-ab79-11b842a15696",
         "name": "Total Network In By Element",
-        "widgetType": "multi-metric-time-series",
         "properties": {
-          "showElementTotal": "true",
-          "selectedAttributes": "[]",
-          "elementScopeTags": "[]",
-          "useElementNameContains": "true",
           "elementScopeTypes": "[\"SERVER\"]",
           "metricLimit": "10",
-          "metricAggs": "[]",
-          "elementScopeIds": "[]",
-          "elementScopeAttributes": "[]",
-          "showHighest": "true",
-          "width": "auto",
           "metrics": "[{\"fqn\":\"network.eth0.rx_byte\",\"aggFns\":[]}]",
-          "selectedTab": "table"
+          "selectedTab": "table",
+          "showElementTotal": "true",
+          "showHighest": "true",
+          "useElementNameContains": "true",
+          "width": "auto"
         },
-        "created": "2016-02-22T22:55:22Z",
-        "updated": "2016-04-20T02:32:20Z"
+        "updated": "2016-04-20T02:32:20Z",
+        "widgetType": "multi-metric-time-series"
       },
       {
+        "created": "2016-02-22T22:46:32Z",
         "id": "9199dfc5-52ce-49bc-b839-1e10dd854822",
         "name": "Recent Events",
-        "widgetType": "event-ticker",
         "properties": {
-          "showElementTotal": "true",
-          "selectedAttributes": "[]",
-          "elementScopeTags": "[]",
-          "useElementNameContains": "true",
           "elementScopeTypes": "[\"SERVER\"]",
           "metricLimit": "10",
-          "elementScopeIds": "[]",
-          "elementScopeAttributes": "[]",
+          "selectedTab": "table",
+          "showElementTotal": "true",
           "showHighest": "true",
-          "width": "medium",
-          "metrics": "[]",
-          "selectedTab": "table"
+          "useElementNameContains": "true",
+          "width": "medium"
         },
-        "created": "2016-02-22T22:46:32Z",
-        "updated": "2016-02-22T22:47:44Z"
+        "updated": "2016-02-22T22:47:44Z",
+        "widgetType": "event-ticker"
       },
       {
+        "created": "2016-02-22T22:56:58Z",
         "id": "37b7ab07-e34a-43c3-8a70-7742579bcc9b",
         "name": "Total Disk Reads by Element",
-        "widgetType": "multi-metric-time-series",
         "properties": {
-          "showElementTotal": "true",
-          "selectedAttributes": "[]",
-          "elementScopeTags": "[]",
-          "useElementNameContains": "true",
           "elementScopeTypes": "[\"SERVER\"]",
           "metricLimit": "10",
-          "metricAggs": "[]",
-          "elementScopeIds": "[]",
-          "elementScopeAttributes": "[]",
-          "showHighest": "true",
-          "width": "auto",
           "metrics": "[{\"fqn\":\"netuitive.linux.iostat.total.reads_byte\",\"aggFns\":[]},{\"fqn\":\"netuitive.linux.iostat.totalreads\",\"aggFns\":[]}]",
-          "selectedTab": "table"
+          "selectedTab": "table",
+          "showElementTotal": "true",
+          "showHighest": "true",
+          "useElementNameContains": "true",
+          "width": "auto"
         },
-        "created": "2016-02-22T22:56:58Z",
-        "updated": "2016-04-20T02:34:42Z"
+        "updated": "2016-04-20T02:34:42Z",
+        "widgetType": "multi-metric-time-series"
       },
       {
+        "created": "2018-01-31T19:37:04Z",
         "id": "bf72bc89-3235-4c3b-8c21-a7bb992f5f12",
         "name": "Top 5 Highest Utilized",
-        "widgetType": "metric-range",
         "properties": {
-          "visualization": "bar",
-          "tableColumns": "[{\"columnType\":\"elementType\",\"width\":\"10%\"},{\"columnType\":\"elementName\",\"width\":\"80%\"},{\"columnType\":\"metric\",\"width\":\"10%\",\"metricDisplayName\":null,\"metricFqn\":null,\"metricAggFn\":null,\"metricAgg\":null,\"metricUnit\":null}]",
           "colorByMetric": "false",
-          "showElementTotal": "true",
-          "elementScopeTags": "[]",
-          "useAllElementScopeTags": "true",
           "elementScopeTypes": "[\"SERVER\"]",
-          "metricLimit": "5",
-          "useAllMetricScopeTags": "true",
-          "metricAggs": "[]",
-          "elementScopeIds": "[]",
-          "elementScopeAttributes": "[]",
-          "elementNameContains": "",
-          "showHighest": "true",
-          "metric_fqn": "netuitive.linux.cpu.total.utilization.percent",
-          "metricScopeTags": "[]",
-          "useAllElementScopeAttributes": "true",
           "metricAgg": "avg",
+          "metricLimit": "5",
+          "metric_fqn": "netuitive.linux.cpu.total.utilization.percent",
           "metrics": "[{\"fqn\":null,\"useRegex\":false,\"aggFns\":[],\"metricAgg\":null}]",
-          "elementScopeExcludedTags": "[]"
+          "showElementTotal": "true",
+          "showHighest": "true",
+          "tableColumns": "[{\"columnType\":\"elementType\",\"width\":\"10%\"},{\"columnType\":\"elementName\",\"width\":\"80%\"},{\"columnType\":\"metric\",\"width\":\"10%\",\"metricDisplayName\":null,\"metricFqn\":null,\"metricAggFn\":null,\"metricAgg\":null,\"metricUnit\":null}]",
+          "useAllElementScopeAttributes": "true",
+          "useAllElementScopeTags": "true",
+          "useAllMetricScopeTags": "true",
+          "visualization": "bar"
         },
-        "created": "2018-01-31T19:37:04Z",
-        "updated": "2018-01-31T19:37:04Z"
+        "updated": "2018-01-31T19:37:04Z",
+        "widgetType": "metric-range"
       }
-    ],
-    "type": "DEFAULT",
-    "private": false
+    ]
   }
 }
