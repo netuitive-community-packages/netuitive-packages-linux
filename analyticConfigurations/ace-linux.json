@@ -54,6 +54,12 @@
         "correlation" : true
       }
     }, {
+      "match" : "netuitive.linux.network.total_byte_all_nics",
+      "properties" : {
+        "baseline" : true,
+        "correlation" : true
+      }
+    },{
       "match" : "netuitive.linux.diskspace\\.(.*)\\.byte_percentused",
       "properties" : {
         "baseline" : false,
@@ -64,7 +70,7 @@
       "properties" : {
         "baseline" : false,
         "correlation" : false
-      }    
+      }
     }, {
       "match" : "netuitive.linux.diskspace\\.avg_byte_percentused",
       "properties" : {
@@ -76,7 +82,7 @@
       "properties" : {
         "baseline" : true,
         "correlation" : true
-      }   
+      }
     }, {
       "match" : "netuitive.linux.iostat.max.util_percentage",
       "properties" : {

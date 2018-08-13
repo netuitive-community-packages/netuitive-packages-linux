@@ -68,6 +68,21 @@
         "fqn" : "netuitive.linux.network.${1}.errorspercent"
       }
     }, {
+      "match" : "netuitive.linux.network.total_byte",
+      "properties" : {
+        "expression" : "data['network.${1}.rx_byte'].actual + data['network.${1}.tx_byte'].actual",
+        "for" : "network.(.*).(rx_byte|tx_byte)",
+        "fqn" : "netuitive.linux.network.${1}.total_byte",
+        "name" : "Network Total Bytes Transmitted"
+      }
+    }, {
+      "match" : "netuitive.linux.network.total_byte_all_nics",
+      "properties" : {
+        "expression" : "data.sum('network\\..*\\.(rx_byte|tx_bye)')",
+        "fqn" : "netuitive.linux.network.total_byte_all_nics",
+        "name" : "Network Total Bytes Transmitted Across All NICs"
+      }
+    }, {
        "match":"netuitive.linux.diskspace.byte_percentused",
        "properties":{
          "expression":"100 - data['diskspace.${1}.byte_percentfree'].actual",
