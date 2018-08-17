@@ -1,31 +1,23 @@
 {
-  "policy" : {
-    "id" : null,
-    "name" : "Linux - Heartbeat Check Expired",
-    "description" : "A heartbeat has not been received from a Linux Agent for at least the past two minutes. Confirm the agent is running and that there are not any network issues which may be preventing the check from reaching Metricly in time. If the issue is persistent, consider increasing the heartbeat ttl setting to allow more time for the check to reach Metricly.",
-    "scope" : {
-      "elementName" : null,
-      "elementNameExclude" : null,
-      "fqnIncludes" : [ ],
-      "fqnExcludes" : [ ],
-      "elementTypes" : ["SERVER"],
-      "elementTags" : { }
-    },
-    "duration" : 300,
-    "conditions" : [ ],
-    "eventConditions" : [ ],
+  "policy": {
+    "actions": [
+      {
+        "category": 2,
+        "type": "event"
+      }
+    ],
     "checkCondition": {
       "checkName": "heartbeat"
     },
-    "actions" : [ {
-      "type" : "event",
-      "category" : 2
-    } ],
-    "enabled" : true,
-    "deleted" : false,
-    "originTenantId" : null,
-    "originPolicyId" : null,
-    "creatorEmail" : null,
-    "lastUpdated" : null
+    "deleted": false,
+    "description": "A heartbeat has not been received from a Linux Agent for at least the past two minutes. Confirm the agent is running and that there are not any network issues which may be preventing the check from reaching Metricly in time. If the issue is persistent, consider increasing the heartbeat ttl setting to allow more time for the check to reach Metricly.",
+    "duration": 300,
+    "enabled": true,
+    "name": "Linux - Heartbeat Check Expired",
+    "scope": {
+      "elementTypes": [
+        "SERVER"
+      ]
+    }
   }
 }
