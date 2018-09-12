@@ -19,6 +19,8 @@ Additional collectors may be enabled; policies and configurations for those coll
 
 ## Release History
 
+* Apply metric meta to Linux Agents only running Simple Mode
+
 ### Version 3.4.0
 
 * Added computed metrics for network bytes transmitted per NIC and total.
