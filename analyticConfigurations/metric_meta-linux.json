@@ -329,7 +329,7 @@
     ],
     "name": "Linux",
     "scope": {
-      "metricMatches": "^(cpu\\.total\\.|diskspace\\.|iostat\\.|loadavg\\.|memory\\.Mem.*|network\\..*\\.(tx_|rx_)|vmstat\\.).*"
+      "metricMatches": "^(cpu\\.total\\.|diskspace\\.|iostat\\.|loadavg\\.|memory\\.Mem.*|network\\..*\\.(tx_|rx_)|vmstat\\.|netuitive\\.linux\\.).*"
     },
     "type": "METRIC_META"
   }
