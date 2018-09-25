@@ -1,0 +1,120 @@
+{
+  "dashboard": {
+    "name": "Linux Element Detail - Simple",
+    "private": false,
+    "properties": {
+      "gridstackContents": "[{\"id\":\"ac380b78-a21e-4e0c-84da-c185097bb883\",\"x\":6,\"y\":18,\"width\":6,\"height\":9},{\"id\":\"bc706fc6-b4b7-4750-b2e5-6c129d2d802a\",\"x\":0,\"y\":9,\"width\":6,\"height\":9},{\"id\":\"08ef0985-92d4-4fb4-98c6-8fbb7e403cca\",\"x\":6,\"y\":0,\"width\":6,\"height\":9},{\"id\":\"e69c0cf3-0873-4e4a-a061-4c049bdc2a67\",\"x\":0,\"y\":18,\"width\":6,\"height\":9},{\"id\":\"add2a713-31da-47ae-bcb0-0f4655d900b2\",\"x\":0,\"y\":27,\"width\":12,\"height\":10},{\"id\":\"a3ca1ea7-d9a4-4067-b7c7-983abd1fc234\",\"x\":0,\"y\":0,\"width\":6,\"height\":9},{\"id\":\"1df08331-9b90-45ac-91f1-48f6627f2202\",\"x\":6,\"y\":9,\"width\":6,\"height\":9}]",
+      "refreshIntervalSeconds": "300",
+      "timeRangeDuration": "3600",
+      "wrap": "true"
+    },
+    "type": "SERVER",
+    "variant": "SIMPLE",
+    "widgets": [
+      {
+        "id": "ac380b78-a21e-4e0c-84da-c185097bb883",
+        "name": "Tags",
+        "properties": {
+          "metricLimit": "10",
+          "selectedTab": "table",
+          "showElementTotal": "true",
+          "showHighest": "true",
+          "useElementNameContains": "true",
+          "width": "auto"
+        },
+        "widgetType": "element-tags"
+      },
+      {
+        "id": "add2a713-31da-47ae-bcb0-0f4655d900b2",
+        "name": "Events",
+        "properties": {
+          "elementScopeTypes": "[\"SERVER\"]",
+          "metricLimit": "10",
+          "selectedTab": "table",
+          "showElementTotal": "true",
+          "showHighest": "true",
+          "useAllElementScopeTags": "false",
+          "useAllMetricScopeTags": "false",
+          "useElementNameContains": "true",
+          "width": "medium"
+        },
+        "widgetType": "event-ticker"
+      },
+      {
+        "id": "a3ca1ea7-d9a4-4067-b7c7-983abd1fc234",
+        "name": "Current CPU Utilization",
+        "properties": {
+          "metricLimit": "10",
+          "metric_fqn": "netuitive.linux.cpu.total.utilization.percent",
+          "selectedTab": "table",
+          "showElementTotal": "true",
+          "showHighest": "true",
+          "useElementNameContains": "true",
+          "visualization": "gauge",
+          "width": "auto"
+        },
+        "widgetType": "metric-status"
+      },
+      {
+        "id": "e69c0cf3-0873-4e4a-a061-4c049bdc2a67",
+        "name": "Attributes",
+        "properties": {
+          "metricLimit": "10",
+          "selectedTab": "table",
+          "showElementTotal": "true",
+          "showHighest": "true",
+          "useElementNameContains": "true",
+          "width": "auto"
+        },
+        "widgetType": "element-attributes"
+      },
+      {
+        "id": "1df08331-9b90-45ac-91f1-48f6627f2202",
+        "name": "Current Disk Utilization",
+        "properties": {
+          "metricLimit": "10",
+          "metric_fqn": "netuitive.linux.diskspace.avg_byte_percentused",
+          "selectedTab": "table",
+          "showElementTotal": "true",
+          "showHighest": "true",
+          "useAllElementScopeTags": "true",
+          "useAllMetricScopeTags": "true",
+          "useElementNameContains": "true",
+          "visualization": "gauge",
+          "width": "auto"
+        },
+        "widgetType": "metric-status"
+      },
+      {
+        "id": "08ef0985-92d4-4fb4-98c6-8fbb7e403cca",
+        "name": "CPU Utilization",
+        "properties": {
+          "metricAggs": "[\"avg\"]",
+          "metricLimit": "10",
+          "metric_fqn": "netuitive.linux.cpu.total.utilization.percent",
+          "selectedTab": "table",
+          "showElementTotal": "true",
+          "showHighest": "true",
+          "useElementNameContains": "true",
+          "width": "medium"
+        },
+        "widgetType": "metric-time-series"
+      },
+      {
+        "id": "bc706fc6-b4b7-4750-b2e5-6c129d2d802a",
+        "name": "Current Memory Utilization",
+        "properties": {
+          "metricLimit": "10",
+          "metric_fqn": "netuitive.linux.memory.utilizationpercent",
+          "selectedTab": "table",
+          "showElementTotal": "true",
+          "showHighest": "true",
+          "useElementNameContains": "true",
+          "visualization": "gauge",
+          "width": "auto"
+        },
+        "widgetType": "metric-status"
+      }
+    ]
+  }
+}
