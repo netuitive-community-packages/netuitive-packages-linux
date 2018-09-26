@@ -102,11 +102,19 @@
       "encoding" : "application/json",
       "content" : null
     }
-  }, {
-    "data" : {
-      "file" : "dashboards/linux.element.detail.json",
-      "encoding" : "application/json",
-      "content" : null
+  },
+  {
+    "data": {
+      "file": "dashboards/linux.element.detail.json",
+      "encoding": "application/json",
+      "content": null
+    }
+  },
+  {
+    "data": {
+      "file": "dashboards/linux.element.detail.simple.json",
+      "encoding": "application/json",
+      "content": null
     }
   } ]
 }
