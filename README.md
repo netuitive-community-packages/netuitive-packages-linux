@@ -19,6 +19,8 @@ Additional collectors may be enabled; policies and configurations for those coll
 
 ## Release History
 
+### Version 3.5.0
+
 * Add a Simple Mode element detail dashboard
 * Apply metric meta to Linux Agents only running Simple Mode
 
