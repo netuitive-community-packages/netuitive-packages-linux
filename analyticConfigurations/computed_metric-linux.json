@@ -1,152 +1,167 @@
 {
-  "analyticConfiguration" : {
-    "tenantId" : null,
-    "type" : "COMPUTED_METRIC",
-    "id" : null,
-    "packageId" : null,
-    "name" : "Linux",
-    "scope" : {
-      "elementName" : null,
-      "elementType" : null,
-      "elementTags" : null,
-      "metricMatches" : "^(cpu\\.total\\.|diskspace\\.|iostat\\.|loadavg\\.|memory\\.Mem.*|network\\..*\\.(tx_|rx_)|vmstat\\.).*"
+  "analyticConfiguration": {
+    "metrics": [
+      {
+        "match": "netuitive.linux.memory.utilizationpercent",
+        "properties": {
+          "expression": "100 - (data['memory.Buffers'].actual + data['memory.Cached'].actual + data['memory.MemFree'].actual) / data['memory.MemTotal'].actual * 100",
+          "fqn": "netuitive.linux.memory.utilizationpercent",
+          "name": "Memory Utilization Percent"
+        }
+      },
+      {
+        "match": "netuitive.linux.memory.swaputilizationpercent",
+        "properties": {
+          "cml": "(${memory.SwapTotal}.avg - ${memory.SwapFree}.avg) / ${memory.SwapTotal}.avg * 100",
+          "fqn": "netuitive.linux.memory.swaputilizationpercent",
+          "name": "Swap Utilization Percent"
+        }
+      },
+      {
+        "match": "netuitive.linux.cpu.total.utilization.percent",
+        "properties": {
+          "expression": "(data['cpu.total.idle'] != null && data['cpu.total.idle'].actual != null) ? ((data.sum('cpu.total.*') - data['cpu.total.idle'].actual) / data.sum('cpu.total.*')) * 100 : data['cpu.cpu0.idle'] != null ? ((data.sum('cpu[.].*') - data.sum('cpu[.].*.idle')) / data.sum('cpu[.].*')) * 100 : null",
+          "fqn": "netuitive.linux.cpu.total.utilization.percent",
+          "name": "CPU Utilization Percent"
+        }
+      },
+      {
+        "match": "netuitive.linux.cpu.total.system.normalized",
+        "properties": {
+          "expression": "attribute['cpus'] == null ? null : (data['cpu.total.system'].actual / attribute['cpus'].value)",
+          "fqn": "netuitive.linux.cpu.total.system.normalized",
+          "name": "CPU System Percent Normalized"
+        }
+      },
+      {
+        "match": "netuitive.linux.cpu.total.usernormalized",
+        "properties": {
+          "expression": "attribute['cpus'] == null ? null : (data['cpu.total.user'].actual / attribute['cpus'].value)",
+          "fqn": "netuitive.linux.cpu.total.user.normalized",
+          "name": "CPU User Percent Normalized"
+        }
+      },
+      {
+        "match": "netuitive.linux.network.errors",
+        "properties": {
+          "expression": "data['network.${1}.rx_errors'].actual + data['network.${1}.tx_errors'].actual",
+          "for": "network.(.*).rx_errors",
+          "fqn": "netuitive.linux.network.${1}.errors"
+        }
+      },
+      {
+        "match": "netuitive.linux.network.packets",
+        "properties": {
+          "expression": "data['network.${1}.rx_packets'].actual + data['network.${1}.tx_packets'].actual",
+          "for": "network.(.*).rx_packets",
+          "fqn": "netuitive.linux.network.${1}.packets"
+        }
+      },
+      {
+        "match": "netuitive.linux.network.errorspercent",
+        "properties": {
+          "expression": "(data['netuitive.linux.network.${1}.packets'].actual == null || data['netuitive.linux.network.${1}.packets'].actual == 0) ? 0 : (data['netuitive.linux.network.${1}.errors'].actual / data['netuitive.linux.network.${1}.packets'].actual) * 100",
+          "for": "netuitive.linux.network.(.*).errors",
+          "fqn": "netuitive.linux.network.${1}.errorspercent"
+        }
+      },
+      {
+        "match": "netuitive.linux.network.total_byte",
+        "properties": {
+          "expression": "data['network.${1}.rx_byte'].actual + data['network.${1}.tx_byte'].actual",
+          "for": "network.(.*).(rx_byte|tx_byte)",
+          "fqn": "netuitive.linux.network.${1}.total_byte",
+          "name": "Network Total Bytes Transmitted"
+        }
+      },
+      {
+        "match": "netuitive.linux.network.total_byte_all_nics",
+        "properties": {
+          "expression": "data.sum('network\\..*\\.(rx_byte|tx_bye)')",
+          "fqn": "netuitive.linux.network.total_byte_all_nics",
+          "name": "Network Total Bytes Transmitted Across All NICs"
+        }
+      },
+      {
+        "match": "netuitive.linux.diskspace.byte_percentused",
+        "properties": {
+          "expression": "100 - data['diskspace.${1}.byte_percentfree'].actual",
+          "for": "diskspace.(.*).byte_percentfree",
+          "fqn": "netuitive.linux.diskspace.${1}.byte_percentused"
+        }
+      },
+      {
+        "match": "netuitive.linux.diskspace.byte_percentused_nonsuperuser",
+        "properties": {
+          "expression": "100 - data['diskspace.${1}.byte_percentavailable'].actual",
+          "for": "diskspace.(.*).byte_percentavailable",
+          "fqn": "netuitive.linux.diskspace.${1}.byte_percentused_nonsuperuser"
+        }
+      },
+      {
+        "match": "netuitive.linux.loadavg.01.normalized",
+        "properties": {
+          "expression": "attribute['cpus'] == null ? null : (data['loadavg.01'].actual / attribute['cpus'].value)",
+          "fqn": "netuitive.linux.loadavg.01.normalized"
+        }
+      },
+      {
+        "match": "netuitive.linux.loadavg.05.normalized",
+        "properties": {
+          "expression": "attribute['cpus'] == null ? null : (data['loadavg.05'].actual / attribute['cpus'].value)",
+          "fqn": "netuitive.linux.loadavg.05.normalized"
+        }
+      },
+      {
+        "match": "netuitive.linux.loadavg.15.normalized",
+        "properties": {
+          "expression": "attribute['cpus'] == null ? null : (data['loadavg.15'].actual / attribute['cpus'].value)",
+          "fqn": "netuitive.linux.loadavg.15.normalized"
+        }
+      },
+      {
+        "match": "netuitive.linux.iostat.totalreads",
+        "properties": {
+          "expression": "data.sum('iostat\\..*\\.reads')",
+          "fqn": "netuitive.linux.iostat.totalreads",
+          "name": "Total Reads Across All Disks"
+        }
+      },
+      {
+        "match": "netuitive.linux.iostat.totalwrites",
+        "properties": {
+          "expression": "data.sum('iostat\\..*\\.writes')",
+          "fqn": "netuitive.linux.iostat.totalwrites",
+          "name": "Total Writes Across All Disks"
+        }
+      },
+      {
+        "match": "netuitive.linux.iostat.max_util_percentage",
+        "properties": {
+          "expression": "data.max('iostat\\..*\\.util_percentage')",
+          "fqn": "netuitive.linux.iostat.max_util_percentage",
+          "name": "Maximum Utilization Percentage Across All Disks"
+        }
+      },
+      {
+        "match": "netuitive.linux.diskspace.avg_byte_percentused",
+        "properties": {
+          "expression": "(data.count('diskspace\\..*\\..byte_percentfree') == null) || (data.count('diskspace\\..*\\..byte_percentfree') == 0) ? null : 100 - data.sum('diskspace\\..*\\..byte_percentfree') / data.count('diskspace\\..*\\..byte_percentfree')",
+          "fqn": "netuitive.linux.diskspace.avg_byte_percentused"
+        }
+      },
+      {
+        "match": "netuitive.linux.diskspace.avg_byte_percentused_nonsuperuser",
+        "properties": {
+          "expression": "(data.count('diskspace\\..*\\..byte_percentavailable') == null) || (data.count('diskspace\\..*\\..byte_percentavailable') == 0) ? null : 100 - data.sum('diskspace\\..*\\..byte_percentavailable') / data.count('diskspace\\..*\\..byte_percentavailable')",
+          "fqn": "netuitive.linux.diskspace.avg_byte_percentused_nonsuperuser"
+        }
+      }
+    ],
+    "name": "Linux",
+    "scope": {
+      "metricMatches": "^(cpu\\.total\\.|diskspace\\.|iostat\\.|loadavg\\.|memory\\.Mem.*|network\\..*\\.(tx_|rx_)|vmstat\\.).*"
     },
-    "metrics" : [ {
-      "match" : "netuitive.linux.memory.utilizationpercent",
-      "properties" : {
-        "expression" : "100 - (data['memory.Buffers'].actual + data['memory.Cached'].actual + data['memory.MemFree'].actual) / data['memory.MemTotal'].actual * 100",
-        "fqn" : "netuitive.linux.memory.utilizationpercent",
-        "name" : "Memory Utilization Percent"
-      }
-    }, {
-      "match" : "netuitive.linux.memory.swaputilizationpercent",
-      "properties" : {
-        "cml" : "(${memory.SwapTotal}.avg - ${memory.SwapFree}.avg) / ${memory.SwapTotal}.avg * 100",
-        "fqn" : "netuitive.linux.memory.swaputilizationpercent",
-        "name" : "Swap Utilization Percent"
-      }
-    }, {
-      "match" : "netuitive.linux.cpu.total.utilization.percent",
-      "properties" : {
-        "expression" : "(data['cpu.total.idle'] != null && data['cpu.total.idle'].actual != null) ? ((data.sum('cpu.total.*') - data['cpu.total.idle'].actual) / data.sum('cpu.total.*')) * 100 : data['cpu.cpu0.idle'] != null ? ((data.sum('cpu[.].*') - data.sum('cpu[.].*.idle')) / data.sum('cpu[.].*')) * 100 : null",
-        "fqn" : "netuitive.linux.cpu.total.utilization.percent",
-        "name" : "CPU Utilization Percent"
-      }
-    }, {
-      "match" : "netuitive.linux.cpu.total.system.normalized",
-      "properties" : {
-        "expression" : "attribute['cpus'] == null ? null : (data['cpu.total.system'].actual / attribute['cpus'].value)",
-        "fqn" : "netuitive.linux.cpu.total.system.normalized",
-        "name" : "CPU System Percent Normalized"
-      }
-    }, {
-      "match" : "netuitive.linux.cpu.total.usernormalized",
-      "properties" : {
-        "expression" : "attribute['cpus'] == null ? null : (data['cpu.total.user'].actual / attribute['cpus'].value)",
-        "fqn" : "netuitive.linux.cpu.total.user.normalized",
-        "name" : "CPU User Percent Normalized"
-      }
-    }, {
-      "match" : "netuitive.linux.network.errors",
-      "properties" : {
-        "expression" : "data['network.${1}.rx_errors'].actual + data['network.${1}.tx_errors'].actual",
-        "for" : "network.(.*).rx_errors",
-        "fqn" : "netuitive.linux.network.${1}.errors"
-      }
-    }, {
-      "match" : "netuitive.linux.network.packets",
-      "properties" : {
-        "expression" : "data['network.${1}.rx_packets'].actual + data['network.${1}.tx_packets'].actual",
-        "for" : "network.(.*).rx_packets",
-        "fqn" : "netuitive.linux.network.${1}.packets"
-      }
-    }, {
-      "match" : "netuitive.linux.network.errorspercent",
-      "properties" : {
-        "expression" : "(data['netuitive.linux.network.${1}.packets'].actual == null || data['netuitive.linux.network.${1}.packets'].actual == 0) ? 0 : (data['netuitive.linux.network.${1}.errors'].actual / data['netuitive.linux.network.${1}.packets'].actual) * 100",
-        "for" : "netuitive.linux.network.(.*).errors",
-        "fqn" : "netuitive.linux.network.${1}.errorspercent"
-      }
-    }, {
-      "match" : "netuitive.linux.network.total_byte",
-      "properties" : {
-        "expression" : "data['network.${1}.rx_byte'].actual + data['network.${1}.tx_byte'].actual",
-        "for" : "network.(.*).(rx_byte|tx_byte)",
-        "fqn" : "netuitive.linux.network.${1}.total_byte",
-        "name" : "Network Total Bytes Transmitted"
-      }
-    }, {
-      "match" : "netuitive.linux.network.total_byte_all_nics",
-      "properties" : {
-        "expression" : "data.sum('network\\..*\\.(rx_byte|tx_bye)')",
-        "fqn" : "netuitive.linux.network.total_byte_all_nics",
-        "name" : "Network Total Bytes Transmitted Across All NICs"
-      }
-    }, {
-       "match":"netuitive.linux.diskspace.byte_percentused",
-       "properties":{
-         "expression":"100 - data['diskspace.${1}.byte_percentfree'].actual",
-         "for":"diskspace.(.*).byte_percentfree",
-         "fqn":"netuitive.linux.diskspace.${1}.byte_percentused"
-      }
-    }, {
-       "match":"netuitive.linux.diskspace.byte_percentused_nonsuperuser",
-       "properties":{
-         "expression":"100 - data['diskspace.${1}.byte_percentavailable'].actual",
-         "for":"diskspace.(.*).byte_percentavailable",
-         "fqn":"netuitive.linux.diskspace.${1}.byte_percentused_nonsuperuser"
-      }
-    }, {
-      "match" : "netuitive.linux.loadavg.01.normalized",
-      "properties" : {
-        "expression" : "attribute['cpus'] == null ? null : (data['loadavg.01'].actual / attribute['cpus'].value)",
-        "fqn" : "netuitive.linux.loadavg.01.normalized"
-      }
-    }, {
-      "match" : "netuitive.linux.loadavg.05.normalized",
-      "properties" : {
-        "expression" : "attribute['cpus'] == null ? null : (data['loadavg.05'].actual / attribute['cpus'].value)",
-        "fqn" : "netuitive.linux.loadavg.05.normalized"
-      }
-    }, {
-      "match" : "netuitive.linux.loadavg.15.normalized",
-      "properties" : {
-        "expression" : "attribute['cpus'] == null ? null : (data['loadavg.15'].actual / attribute['cpus'].value)",
-        "fqn" : "netuitive.linux.loadavg.15.normalized"
-      }
-    }, {
-      "match" : "netuitive.linux.iostat.totalreads",
-      "properties" : {
-        "expression" : "data.sum('iostat\\..*\\.reads')",
-        "fqn" : "netuitive.linux.iostat.totalreads",
-        "name" : "Total Reads Across All Disks"
-      }
-    }, {
-      "match" : "netuitive.linux.iostat.totalwrites",
-      "properties" : {
-        "expression" : "data.sum('iostat\\..*\\.writes')",
-        "fqn" : "netuitive.linux.iostat.totalwrites",
-        "name" : "Total Writes Across All Disks"
-      }
-    }, {
-      "match" : "netuitive.linux.iostat.max_util_percentage",
-      "properties" : {
-        "expression" : "data.max('iostat\\..*\\.util_percentage')",
-        "fqn" : "netuitive.linux.iostat.max_util_percentage",
-        "name" : "Maximum Utilization Percentage Across All Disks"
-      }
-    }, {
-      "match" : "netuitive.linux.diskspace.avg_byte_percentused",
-      "properties" : {
-        "expression" : "(data.count('diskspace\\..*\\..byte_percentfree') == null) || (data.count('diskspace\\..*\\..byte_percentfree') == 0) ? null : 100 - data.sum('diskspace\\..*\\..byte_percentfree') / data.count('diskspace\\..*\\..byte_percentfree')",
-        "fqn" : "netuitive.linux.diskspace.avg_byte_percentused"
-      }
-    }, {
-       "match":"netuitive.linux.diskspace.avg_byte_percentused_nonsuperuser",
-       "properties":{
-        "expression":"(data.count('diskspace\\..*\\..byte_percentavailable') == null) || (data.count('diskspace\\..*\\..byte_percentavailable') == 0) ? null : 100 - data.sum('diskspace\\..*\\..byte_percentavailable') / data.count('diskspace\\..*\\..byte_percentavailable')",
-        "fqn":"netuitive.linux.diskspace.avg_byte_percentused_nonsuperuser"
-      }
-    } ]
+    "type": "COMPUTED_METRIC"
   }
 }

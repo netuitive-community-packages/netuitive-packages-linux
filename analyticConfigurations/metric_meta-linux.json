@@ -1,301 +1,336 @@
 {
-  "analyticConfiguration" : {
-    "tenantId" : null,
-    "type" : "METRIC_META",
-    "id" : null,
-    "packageId" : null,
-    "name" : "Linux",
-    "scope" : {
-      "elementName" : null,
-      "elementType" : null,
-      "elementTags" : null,
-      "metricMatches" : "^(cpu\\.total\\.|diskspace\\.|iostat\\.|loadavg\\.|memory\\.Mem.*|network\\..*\\.(tx_|rx_)|vmstat\\.).*"
+  "analyticConfiguration": {
+    "metrics": [
+      {
+        "match": "netuitive.linux.cpu.total.utilization.percent",
+        "properties": {
+          "tags": {
+            "unit": "percent",
+            "utilization": true
+          },
+          "validMax": 100
+        }
+      },
+      {
+        "match": "netuitive.metrics.heartbeat",
+        "properties": {
+          "sparseDataStrategy": "ReplaceWithZero",
+          "validMax": 1
+        }
+      },
+      {
+        "match": "netuitive.linux.cpu.total\\..*\\.normalized",
+        "properties": {
+          "tags": {
+            "unit": "percent"
+          },
+          "validMax": 100
+        }
+      },
+      {
+        "match": "iostat\\..*\\.util_percentage",
+        "properties": {
+          "tags": {
+            "unit": "percent"
+          },
+          "validMax": 100
+        }
+      },
+      {
+        "match": "iostat\\..*\\.iops",
+        "properties": {
+          "tags": {
+            "unit": "iops"
+          }
+        }
+      },
+      {
+        "match": "iostat\\..*\\..*byte_per_second",
+        "properties": {
+          "tags": {
+            "unit": "Bps"
+          }
+        }
+      },
+      {
+        "match": "iostat\\..*\\..*await",
+        "properties": {
+          "tags": {
+            "unit": "ms"
+          }
+        }
+      },
+      {
+        "match": "iostat\\..*\\.write.*per_second",
+        "properties": {
+          "tags": {
+            "unit": "wps"
+          }
+        }
+      },
+      {
+        "match": "iostat\\..*\\.read.*per_second",
+        "properties": {
+          "tags": {
+            "unit": "rps"
+          }
+        }
+      },
+      {
+        "match": "diskspace\\..*\\.byte_percentfree",
+        "properties": {
+          "tags": {
+            "unit": "percent"
+          },
+          "validMax": 100
+        }
+      },
+      {
+        "match": "diskspace\\..*\\.inodes_percentfree",
+        "properties": {
+          "tags": {
+            "unit": "percent"
+          },
+          "validMax": 100
+        }
+      },
+      {
+        "match": "netuitive.linux.diskspace\\..*\\.byte_percentused",
+        "properties": {
+          "tags": {
+            "unit": "percent"
+          },
+          "validMax": 100
+        }
+      },
+      {
+        "match": "netuitive.linux.diskspace\\..*\\.byte_percentused_nonsuperuser",
+        "properties": {
+          "tags": {
+            "unit": "percent"
+          },
+          "validMax": 100
+        }
+      },
+      {
+        "match": "netuitive.linux.diskspace\\.avg_byte_percentused",
+        "properties": {
+          "tags": {
+            "unit": "percent",
+            "utilization": true
+          },
+          "validMax": 100
+        }
+      },
+      {
+        "match": "netuitive.linux.diskspace\\.avg_byte_percentused_nonsuperuser",
+        "properties": {
+          "tags": {
+            "unit": "percent",
+            "utilization": true
+          },
+          "validMax": 100
+        }
+      },
+      {
+        "match": "network\\..*",
+        "properties": {
+          "statistic": "sum"
+        }
+      },
+      {
+        "match": "diskspace\\..*\\.byte_(used|free|avail)",
+        "properties": {
+          "tags": {
+            "unit": "bytes"
+          }
+        }
+      },
+      {
+        "match": "network\\..*bit",
+        "properties": {
+          "tags": {
+            "unit": "bits"
+          }
+        }
+      },
+      {
+        "match": "network\\..*byte",
+        "properties": {
+          "tags": {
+            "unit": "bytes"
+          }
+        }
+      },
+      {
+        "match": "memory\\..*",
+        "properties": {
+          "tags": {
+            "unit": "bytes"
+          }
+        }
+      },
+      {
+        "match": "netuitive.linux.network\\..*\\.errors",
+        "properties": {
+          "STATISTIC": "sum"
+        }
+      },
+      {
+        "match": "netuitive.linux.network\\..*\\.packets",
+        "properties": {
+          "STATISTIC": "sum"
+        }
+      },
+      {
+        "match": "netuitive.linux.network\\..*\\.total_byte",
+        "properties": {
+          "STATISTIC": "sum",
+          "tags": {
+            "unit": "bytes"
+          }
+        }
+      },
+      {
+        "match": "netuitive.linux.network.total_byte_all_nics",
+        "properties": {
+          "STATISTIC": "sum",
+          "tags": {
+            "unit": "bytes"
+          }
+        }
+      },
+      {
+        "match": "iostat\\..*\\.io",
+        "properties": {
+          "STATISTIC": "sum"
+        }
+      },
+      {
+        "match": "iostat\\..*\\.io_.*",
+        "properties": {
+          "STATISTIC": "sum"
+        }
+      },
+      {
+        "match": "iostat\\..*\\.reads",
+        "properties": {
+          "STATISTIC": "sum"
+        }
+      },
+      {
+        "match": "iostat\\..*\\.reads_byte",
+        "properties": {
+          "STATISTIC": "sum",
+          "tags": {
+            "unit": "bytes"
+          }
+        }
+      },
+      {
+        "match": "iostat\\..*\\.reads_merged",
+        "properties": {
+          "STATISTIC": "sum"
+        }
+      },
+      {
+        "match": "iostat\\..*\\.reads_milliseconds",
+        "properties": {
+          "STATISTIC": "sum",
+          "tags": {
+            "unit": "ms"
+          }
+        }
+      },
+      {
+        "match": "iostat\\..*\\.writes",
+        "properties": {
+          "STATISTIC": "sum"
+        }
+      },
+      {
+        "match": "iostat\\..*\\.writes_byte",
+        "properties": {
+          "STATISTIC": "sum",
+          "tags": {
+            "unit": "bytes"
+          }
+        }
+      },
+      {
+        "match": "iostat\\..*\\.writes_merged",
+        "properties": {
+          "STATISTIC": "sum"
+        }
+      },
+      {
+        "match": "iostat\\..*\\.writes_milliseconds",
+        "properties": {
+          "STATISTIC": "sum",
+          "tags": {
+            "unit": "ms"
+          }
+        }
+      },
+      {
+        "match": "iostat\\..*\\..*milliseconds.*",
+        "properties": {
+          "tags": {
+            "unit": "ms"
+          },
+          "validMax": 300000
+        }
+      },
+      {
+        "match": "netuitive.linux.memory.utilizationpercent",
+        "properties": {
+          "tags": {
+            "unit": "percent",
+            "utilization": true
+          },
+          "validMax": 100
+        }
+      },
+      {
+        "match": "netuitive.linux.network.*.errorspercent",
+        "properties": {
+          "tags": {
+            "unit": "percent"
+          },
+          "validMax": 100
+        }
+      },
+      {
+        "match": "cpu\\..*",
+        "properties": {
+          "tags": {
+            "unit": "percent"
+          }
+        }
+      },
+      {
+        "match": "cpu\\.total\\.iowait",
+        "properties": {
+          "tags": {
+            "utilization": true
+          }
+        }
+      },
+      {
+        "match": "netuitive.linux.iostat.max_util_percentage",
+        "properties": {
+          "tags": {
+            "unit": "percent",
+            "utilization": true
+          },
+          "validMax": 100
+        }
+      }
+    ],
+    "name": "Linux",
+    "scope": {
+      "metricMatches": "^(cpu\\.total\\.|diskspace\\.|iostat\\.|loadavg\\.|memory\\.Mem.*|network\\..*\\.(tx_|rx_)|vmstat\\.|netuitive\\.linux\\.).*"
     },
-    "metrics" : [ {
-      "match" : "netuitive.linux.cpu.total.utilization.percent",
-      "properties" : {
-        "tags" : {
-          "utilization" : true,
-          "unit" : "percent"
-        },
-        "validMax" : 100
-      }
-    }, {
-      "match" : "netuitive.metrics.heartbeat",
-      "properties" : {
-        "sparseDataStrategy" : "ReplaceWithZero",
-        "validMax" : 1
-      }
-    }, {
-      "match" : "netuitive.linux.cpu.total\\..*\\.normalized",
-      "properties" : {
-        "tags" : {
-          "unit" : "percent"
-        },
-        "validMax" : 100
-      }
-    }, {
-      "match" : "iostat\\..*\\.util_percentage",
-      "properties" : {
-        "tags" : {
-          "unit" : "percent"
-        },
-        "validMax" : 100
-      }
-    }, {
-      "match" : "iostat\\..*\\.iops",
-      "properties" : {
-        "tags" : {
-          "unit" : "iops"
-        }
-      }
-    }, {
-      "match" : "iostat\\..*\\..*byte_per_second",
-      "properties" : {
-        "tags" : {
-          "unit" : "Bps"
-        }
-      }
-    }, {
-      "match" : "iostat\\..*\\..*await",
-      "properties" : {
-        "tags" : {
-          "unit" : "ms"
-        }
-      }
-    }, {
-      "match" : "iostat\\..*\\.write.*per_second",
-      "properties" : {
-        "tags" : {
-          "unit" : "wps"
-        }
-      }
-    }, {
-      "match" : "iostat\\..*\\.read.*per_second",
-      "properties" : {
-        "tags" : {
-          "unit" : "rps"
-        }
-      }
-    }, {
-      "match" : "diskspace\\..*\\.byte_percentfree",
-      "properties" : {
-        "tags" : {
-          "unit" : "percent"
-        },
-        "validMax" : 100
-      }
-    }, {
-      "match" : "diskspace\\..*\\.inodes_percentfree",
-      "properties" : {
-        "tags" : {
-          "unit" : "percent"
-        },
-        "validMax" : 100
-      }
-    }, {
-      "match" : "netuitive.linux.diskspace\\..*\\.byte_percentused",
-      "properties" : {
-        "tags" : {
-          "unit" : "percent"
-        },
-        "validMax" : 100
-      }
-    }, {
-      "match" : "netuitive.linux.diskspace\\..*\\.byte_percentused_nonsuperuser",
-      "properties" : {
-        "tags" : {
-          "unit" : "percent"
-        },
-        "validMax" : 100
-      }
-    }, {
-      "match" : "netuitive.linux.diskspace\\.avg_byte_percentused",
-      "properties" : {
-        "tags" : {
-          "utilization" : true,
-          "unit" : "percent"
-        },
-        "validMax" : 100
-      }
-    }, {
-      "match" : "netuitive.linux.diskspace\\.avg_byte_percentused_nonsuperuser",
-      "properties" : {
-        "tags" : {
-          "utilization" : true,
-          "unit" : "percent"
-        },
-        "validMax" : 100
-      }
-    }, {
-      "match" : "network\\..*",
-      "properties" : {
-        "statistic" : "sum"
-      }
-    }, {
-      "match" : "diskspace\\..*\\.byte_(used|free|avail)",
-      "properties" : {
-        "tags" : {
-          "unit" : "bytes"
-        }
-      }
-    }, {
-      "match" : "network\\..*bit",
-      "properties" : {
-        "tags" : {
-          "unit" : "bits"
-        }
-      }
-    }, {
-      "match" : "network\\..*byte",
-      "properties" : {
-        "tags" : {
-          "unit" : "bytes"
-        }
-      }
-    }, {
-      "match" : "memory\\..*",
-      "properties" : {
-        "tags" : {
-          "unit" : "bytes"
-        }
-      }
-    }, {
-      "match" : "netuitive.linux.network\\..*\\.errors",
-      "properties" : {
-        "STATISTIC" : "sum"
-      }
-    }, {
-      "match" : "netuitive.linux.network\\..*\\.packets",
-      "properties" : {
-        "STATISTIC" : "sum"
-      }
-    }, {
-      "match" : "netuitive.linux.network\\..*\\.total_byte",
-      "properties" : {
-        "STATISTIC" : "sum",
-        "tags" : {
-          "unit" : "bytes"
-        }
-      }
-    }, {
-      "match" : "netuitive.linux.network.total_byte_all_nics",
-      "properties" : {
-        "STATISTIC" : "sum",
-        "tags" : {
-          "unit" : "bytes"
-        }
-      }
-    }, {
-      "match" : "iostat\\..*\\.io",
-      "properties" : {
-        "STATISTIC" : "sum"
-      }
-    }, {
-      "match" : "iostat\\..*\\.io_.*",
-      "properties" : {
-        "STATISTIC" : "sum"
-      }
-    }, {
-      "match" : "iostat\\..*\\.reads",
-      "properties" : {
-        "STATISTIC" : "sum"
-      }
-    }, {
-      "match" : "iostat\\..*\\.reads_byte",
-      "properties" : {
-        "STATISTIC" : "sum",
-        "tags" : {
-          "unit" : "bytes"
-        }
-      }
-    }, {
-      "match" : "iostat\\..*\\.reads_merged",
-      "properties" : {
-        "STATISTIC" : "sum"
-      }
-    }, {
-      "match" : "iostat\\..*\\.reads_milliseconds",
-      "properties" : {
-        "STATISTIC" : "sum",
-        "tags" : {
-          "unit" : "ms"
-        }
-      }
-    }, {
-      "match" : "iostat\\..*\\.writes",
-      "properties" : {
-        "STATISTIC" : "sum"
-      }
-    }, {
-      "match" : "iostat\\..*\\.writes_byte",
-      "properties" : {
-        "STATISTIC" : "sum",
-        "tags" : {
-          "unit" : "bytes"
-        }
-      }
-    }, {
-      "match" : "iostat\\..*\\.writes_merged",
-      "properties" : {
-        "STATISTIC" : "sum"
-      }
-    }, {
-      "match" : "iostat\\..*\\.writes_milliseconds",
-      "properties" : {
-        "STATISTIC" : "sum",
-        "tags" : {
-          "unit" : "ms"
-        }
-      }
-    }, {
-      "match" : "iostat\\..*\\..*milliseconds.*",
-      "properties" : {
-        "tags" : {
-          "unit" : "ms"
-        },
-        "validMax" : 300000
-      }
-    }, {
-      "match" : "netuitive.linux.memory.utilizationpercent",
-      "properties" : {
-        "tags" : {
-          "utilization" : true,
-          "unit" : "percent"
-        },
-        "validMax" : 100
-      }
-    }, {
-      "match" : "netuitive.linux.network.*.errorspercent",
-      "properties" : {
-        "tags" : {
-          "unit" : "percent"
-        },
-        "validMax" : 100
-      }
-    }, {
-      "match" : "cpu\\..*",
-      "properties" : {
-        "tags" : {
-          "unit" : "percent"
-        }
-      }
-    }, {
-      "match" : "cpu\\.total\\.iowait",
-      "properties" : {
-        "tags" : {
-          "utilization" : true
-        }
-      }
-    }, {
-      "match" : "netuitive.linux.iostat.max_util_percentage",
-      "properties" : {
-        "tags" : {
-          "utilization" : true,
-          "unit" : "percent"
-        },
-        "validMax" : 100
-      }
-    } ]
+    "type": "METRIC_META"
   }
 }

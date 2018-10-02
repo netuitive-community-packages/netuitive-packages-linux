@@ -1,17 +1,18 @@
 {
   "dashboard": {
-    "name": "Linux Element Detail",
+    "name": "Linux Element Detail - Simple",
     "private": false,
     "properties": {
-      "gridstackContents": "[{\"id\":\"3e520555-3fe8-4333-9b24-6e58ade95ec6\",\"x\":6,\"y\":18,\"width\":6,\"height\":9},{\"id\":\"b4abc590-47ec-4932-ab7e-d5610d5df4d3\",\"x\":0,\"y\":27,\"width\":12,\"height\":10},{\"id\":\"1a5fae83-3ad1-4fdd-85d2-d0b79ee8585e\",\"x\":0,\"y\":0,\"width\":4,\"height\":9},{\"id\":\"6952af6d-0960-423c-b941-c0679252a94d\",\"x\":0,\"y\":18,\"width\":6,\"height\":9},{\"id\":\"6c0c7966-0e5c-4a4b-9738-22a8a88bdf10\",\"x\":8,\"y\":0,\"width\":4,\"height\":9},{\"id\":\"2ccd0c21-65d9-4d52-9728-c8efbdfb912f\",\"x\":4,\"y\":9,\"width\":4,\"height\":9},{\"id\":\"f1f548dc-0056-4a50-a588-2980898d5f94\",\"x\":8,\"y\":9,\"width\":4,\"height\":9},{\"id\":\"1faf4be1-dfb7-4a20-80e0-4b7840fa1204\",\"x\":4,\"y\":0,\"width\":4,\"height\":9},{\"id\":\"851f5c7b-7548-457d-905b-ab1a55dc750b\",\"x\":0,\"y\":9,\"width\":4,\"height\":9}]",
+      "gridstackContents": "[{\"id\":\"ac380b78-a21e-4e0c-84da-c185097bb883\",\"x\":6,\"y\":18,\"width\":6,\"height\":9},{\"id\":\"bc706fc6-b4b7-4750-b2e5-6c129d2d802a\",\"x\":0,\"y\":9,\"width\":6,\"height\":9},{\"id\":\"08ef0985-92d4-4fb4-98c6-8fbb7e403cca\",\"x\":6,\"y\":0,\"width\":6,\"height\":9},{\"id\":\"e69c0cf3-0873-4e4a-a061-4c049bdc2a67\",\"x\":0,\"y\":18,\"width\":6,\"height\":9},{\"id\":\"add2a713-31da-47ae-bcb0-0f4655d900b2\",\"x\":0,\"y\":27,\"width\":12,\"height\":10},{\"id\":\"a3ca1ea7-d9a4-4067-b7c7-983abd1fc234\",\"x\":0,\"y\":0,\"width\":6,\"height\":9},{\"id\":\"1df08331-9b90-45ac-91f1-48f6627f2202\",\"x\":6,\"y\":9,\"width\":6,\"height\":9}]",
       "refreshIntervalSeconds": "300",
       "timeRangeDuration": "3600",
       "wrap": "true"
     },
     "type": "SERVER",
+    "variant": "SIMPLE",
     "widgets": [
       {
-        "id": "3e520555-3fe8-4333-9b24-6e58ade95ec6",
+        "id": "ac380b78-a21e-4e0c-84da-c185097bb883",
         "name": "Tags",
         "properties": {
           "metricLimit": "10",
@@ -24,7 +25,7 @@
         "widgetType": "element-tags"
       },
       {
-        "id": "b4abc590-47ec-4932-ab7e-d5610d5df4d3",
+        "id": "add2a713-31da-47ae-bcb0-0f4655d900b2",
         "name": "Events",
         "properties": {
           "elementScopeTypes": "[\"SERVER\"]",
@@ -40,7 +41,7 @@
         "widgetType": "event-ticker"
       },
       {
-        "id": "1a5fae83-3ad1-4fdd-85d2-d0b79ee8585e",
+        "id": "a3ca1ea7-d9a4-4067-b7c7-983abd1fc234",
         "name": "Current CPU Utilization",
         "properties": {
           "metricLimit": "10",
@@ -55,7 +56,7 @@
         "widgetType": "metric-status"
       },
       {
-        "id": "6952af6d-0960-423c-b941-c0679252a94d",
+        "id": "e69c0cf3-0873-4e4a-a061-4c049bdc2a67",
         "name": "Attributes",
         "properties": {
           "metricLimit": "10",
@@ -68,33 +69,7 @@
         "widgetType": "element-attributes"
       },
       {
-        "id": "6c0c7966-0e5c-4a4b-9738-22a8a88bdf10",
-        "name": "CPU Breakdown",
-        "properties": {
-          "metricLimit": "10",
-          "selectedTab": "table",
-          "showElementTotal": "true",
-          "showHighest": "true",
-          "useElementNameContains": "true",
-          "width": "auto"
-        },
-        "widgetType": "cpu-usage"
-      },
-      {
-        "id": "2ccd0c21-65d9-4d52-9728-c8efbdfb912f",
-        "name": "Memory Breakdown",
-        "properties": {
-          "metricLimit": "10",
-          "selectedTab": "table",
-          "showElementTotal": "true",
-          "showHighest": "true",
-          "useElementNameContains": "true",
-          "width": "medium"
-        },
-        "widgetType": "memory-usage"
-      },
-      {
-        "id": "f1f548dc-0056-4a50-a588-2980898d5f94",
+        "id": "1df08331-9b90-45ac-91f1-48f6627f2202",
         "name": "Current Disk Utilization",
         "properties": {
           "metricLimit": "10",
@@ -111,7 +86,7 @@
         "widgetType": "metric-status"
       },
       {
-        "id": "1faf4be1-dfb7-4a20-80e0-4b7840fa1204",
+        "id": "08ef0985-92d4-4fb4-98c6-8fbb7e403cca",
         "name": "CPU Utilization",
         "properties": {
           "metricAggs": "[\"avg\"]",
@@ -126,7 +101,7 @@
         "widgetType": "metric-time-series"
       },
       {
-        "id": "851f5c7b-7548-457d-905b-ab1a55dc750b",
+        "id": "bc706fc6-b4b7-4750-b2e5-6c129d2d802a",
         "name": "Current Memory Utilization",
         "properties": {
           "metricLimit": "10",
