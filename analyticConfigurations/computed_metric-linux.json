@@ -25,7 +25,6 @@
         "match": "netuitive.linux.cpu.total.utilization.percent",
         "properties": {
           "expressions": [
-            "",
             "(sum(cpu.total.*) - ${cpu.total.idle}.actual) / sum(cpu.total.*) * 100",
             "(${cpu.cpu0.idle}.actual / ${cpu.cpu0.idle}.actual) * ((sum(cpu[.].*) - sum(cpu[.].*.idle)) / sum(cpu[.].*)) * 100"
           ],
@@ -56,41 +55,41 @@
       {
         "match": "netuitive.linux.network.errors",
         "properties": {
+          "capture": "network.(.*).rx_errors",
           "expressions": [
             "${network.${1}.rx_errors}.actual + ${network.${1}.tx_errors}.actual"
           ],
-          "capture": "network.(.*).rx_errors",
           "fqn": "netuitive.linux.network.${1}.errors"
         }
       },
       {
         "match": "netuitive.linux.network.packets",
         "properties": {
+          "capture": "network.(.*).rx_packets",
           "expressions": [
             "${network.${1}.rx_packets}.actual + ${network.${1}.tx_packets}.actual"
           ],
-          "capture": "network.(.*).rx_packets",
           "fqn": "netuitive.linux.network.${1}.packets"
         }
       },
       {
         "match": "netuitive.linux.network.errorspercent",
         "properties": {
+          "capture": "netuitive.linux.network.(.*).errors",
           "expressions": [
             "100 * ${netuitive.linux.network.${1}.errors}.actual / ${netuitive.linux.network.${1}.packets}.actual",
             "0"
           ],
-          "capture": "netuitive.linux.network.(.*).errors",
           "fqn": "netuitive.linux.network.${1}.errorspercent"
         }
       },
       {
         "match": "netuitive.linux.network.total_byte",
         "properties": {
+          "capture": "network.(.*).(rx_byte|tx_byte)",
           "expressions": [
             "${network.${1}.rx_byte}.actual + ${network.${1}.tx_byte}.actual"
           ],
-          "capture": "network.(.*).(rx_byte|tx_byte)",
           "fqn": "netuitive.linux.network.${1}.total_byte",
           "name": "Network Total Bytes Transmitted"
         }
@@ -108,20 +107,20 @@
       {
         "match": "netuitive.linux.diskspace.byte_percentused",
         "properties": {
+          "capture": "diskspace[.](.*)[.]byte_percentfree",
           "expressions": [
             "100 - ${diskspace.${1}.byte_percentfree}.actual"
           ],
-          "capture": "diskspace[.](.*)[.]byte_percentfree",
           "fqn": "netuitive.linux.diskspace.${1}.byte_percentused"
         }
       },
       {
         "match": "netuitive.linux.diskspace.byte_percentused_nonsuperuser",
         "properties": {
+          "capture": "diskspace[.](.*)[.]byte_percentavailable",
           "expressions": [
             "100 - ${diskspace.${1}.byte_percentavailable}.actual"
           ],
-          "capture": "diskspace[.](.*)[.]byte_percentavailable",
           "fqn": "netuitive.linux.diskspace.${1}.byte_percentused_nonsuperuser"
         }
       },
