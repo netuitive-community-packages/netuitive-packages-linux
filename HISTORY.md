@@ -1,5 +1,9 @@
 ## Release History
 
+### Version next
+
+* Convert computed metrics to new format
+
 ### Version 3.5.0
 
 * Add a Simple Mode element detail dashboard
