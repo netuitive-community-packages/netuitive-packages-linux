@@ -26,7 +26,7 @@
         "properties": {
           "expressions": [
             "(sum(cpu.total.*) - ${cpu.total.idle}.actual) / sum(cpu.total.*) * 100",
-            "(${cpu.cpu0.idle}.actual / ${cpu.cpu0.idle}.actual) * ((sum(cpu[.].*) - sum(cpu[.].*.idle)) / sum(cpu[.].*)) * 100"
+            "(${cpu.cpu0.idle}.actual / ${cpu.cpu0.idle}.actual) * ((sum(cpu\\..*) - sum(cpu\\..*.idle)) / sum(cpu\\..*)) * 100"
           ],
           "fqn": "netuitive.linux.cpu.total.utilization.percent",
           "name": "CPU Utilization Percent"
@@ -98,7 +98,7 @@
         "match": "netuitive.linux.network.total_byte_all_nics",
         "properties": {
           "expressions": [
-            "sum(network[.].*[.](rx_byte|tx_bye)"
+            "sum(network\\..*\\.(rx_byte|tx_bye)"
           ],
           "fqn": "netuitive.linux.network.total_byte_all_nics",
           "name": "Network Total Bytes Transmitted Across All NICs"
@@ -107,7 +107,7 @@
       {
         "match": "netuitive.linux.diskspace.byte_percentused",
         "properties": {
-          "capture": "diskspace[.](.*)[.]byte_percentfree",
+          "capture": "diskspace\\.(.*)\\.byte_percentfree",
           "expressions": [
             "100 - ${diskspace.${1}.byte_percentfree}.actual"
           ],
@@ -117,7 +117,7 @@
       {
         "match": "netuitive.linux.diskspace.byte_percentused_nonsuperuser",
         "properties": {
-          "capture": "diskspace[.](.*)[.]byte_percentavailable",
+          "capture": "diskspace\\.(.*)\\.byte_percentavailable",
           "expressions": [
             "100 - ${diskspace.${1}.byte_percentavailable}.actual"
           ],
@@ -155,7 +155,7 @@
         "match": "netuitive.linux.iostat.totalreads",
         "properties": {
           "expressions": [
-            "sum(iostat[.].*[.]reads)"
+            "sum(iostat\\..*\\.reads)"
           ],
           "fqn": "netuitive.linux.iostat.totalreads",
           "name": "Total Reads Across All Disks"
@@ -165,7 +165,7 @@
         "match": "netuitive.linux.iostat.totalwrites",
         "properties": {
           "expressions": [
-            "sum(iostat[.].*[.]writes)"
+            "sum(iostat\\..*\\.writes)"
           ],
           "fqn": "netuitive.linux.iostat.totalwrites",
           "name": "Total Writes Across All Disks"
@@ -175,7 +175,7 @@
         "match": "netuitive.linux.iostat.max_util_percentage",
         "properties": {
           "expressions": [
-            "max(iostat[.].*[.]util_percentage)"
+            "max(iostat\\..*\\.util_percentage)"
           ],
           "fqn": "netuitive.linux.iostat.max_util_percentage",
           "name": "Maximum Utilization Percentage Across All Disks"
@@ -185,7 +185,7 @@
         "match": "netuitive.linux.diskspace.avg_byte_percentused",
         "properties": {
           "expressions": [
-            "100 - sum(diskspace[.].*[.].byte_percentfree) / cnt(diskspace[.].*[.].byte_percentfree)"
+            "100 - sum(diskspace\\..*\\..byte_percentfree) / cnt(diskspace\\..*\\..byte_percentfree)"
           ],
           "fqn": "netuitive.linux.diskspace.avg_byte_percentused"
         }
@@ -194,7 +194,7 @@
         "match": "netuitive.linux.diskspace.avg_byte_percentused_nonsuperuser",
         "properties": {
           "expressions": [
-            "100 - sum(diskspace[.].*[.].byte_percentavailable) / cnt(diskspace[.].*[.].byte_percentavailable)"
+            "100 - sum(diskspace\\..*\\..byte_percentavailable) / cnt(diskspace\\..*\\..byte_percentavailable)"
           ],
           "fqn": "netuitive.linux.diskspace.avg_byte_percentused_nonsuperuser"
         }
@@ -202,7 +202,7 @@
     ],
     "name": "Linux",
     "scope": {
-      "metricMatches": "^(cpu[.]total[.]|diskspace[.]|iostat[.]|loadavg[.]|memory[.]Mem.*|network[.].*[.](tx_|rx_)|vmstat[.]).*"
+      "metricMatches": "^(cpu\\.total\\.|diskspace\\.|iostat\\.|loadavg\\.|memory\\.Mem.*|network\\..*\\.(tx_|rx_)|vmstat\\.).*"
     },
     "type": "COMPUTED_METRIC"
   }
