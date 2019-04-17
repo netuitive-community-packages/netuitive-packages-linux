@@ -2,6 +2,10 @@
 
 ### Version next
 
+### Version 3.7.0
+
+* Replace square brackets with backslashes for literals in computed metrics.
+
 ### Version 3.6.0
 
 * Convert computed metrics to new format
