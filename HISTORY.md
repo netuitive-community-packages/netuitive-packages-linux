@@ -2,6 +2,9 @@
 
 ### Version next
 
+* Replace backslashes with square brackets for literals in computed metrics.
+* Remove invalid alternation for total_byte_all_nics computed metric.
+
 ### Version 3.7.0
 
 * Replace square brackets with backslashes for literals in computed metrics.
