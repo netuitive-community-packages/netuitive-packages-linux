@@ -1,6 +1,9 @@
 ## Release History
 
-### Version next
+### Version 3.8.0
+
+* Replace backslashes with square brackets for literals in computed metrics.
+* Remove invalid alternation for total_byte_all_nics computed metric.
 
 ### Version 3.7.0
 
