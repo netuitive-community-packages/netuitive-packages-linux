@@ -5,6 +5,7 @@
         "match": "netuitive.linux.memory.utilizationpercent",
         "properties": {
           "expressions": [
+            "100 - 100 * (${memory.MemAvailable}.actual / ${memory.MemTotal}.actual)",
             "100 - 100 * (${memory.Buffers}.actual + ${memory.Cached}.actual + ${memory.MemFree}.actual) / ${memory.MemTotal}.actual"
           ],
           "fqn": "netuitive.linux.memory.utilizationpercent",
