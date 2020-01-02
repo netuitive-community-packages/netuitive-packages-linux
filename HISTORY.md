@@ -2,6 +2,8 @@
 
 ### Version next
 
+### Version 3.9.0
+
 * Better compute memory utilization for RHEL 7 systems.
 
 ### Version 3.8.0
