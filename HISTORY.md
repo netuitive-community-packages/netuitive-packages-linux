@@ -1,5 +1,9 @@
 ## Release History
 
+### Version next
+
+* Better compute memory utilization for RHEL 7 systems.
+
 ### Version 3.8.0
 
 * Replace backslashes with square brackets for literals in computed metrics.
