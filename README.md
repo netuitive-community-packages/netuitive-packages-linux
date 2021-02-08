@@ -1,6 +1,6 @@
 # netuitive.packages.linux
 
-For detailed information on this package, please refer to the [online documentation](https://help.netuitive.com/Content/Integrations/linux.htm).
+For detailed information on this package, please refer to the [online documentation](https://docs.virtana.com/en/linux-agent.html).
 
 ## Default Collectors
 The following are the collectors that are enabled by default in the Netuitive Agent, and are the ones we assume Netuitive customers will use by default as well.
