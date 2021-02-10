@@ -1,9 +1,9 @@
-# netuitive.packages.linux
+# CloudWisdom.packages.linux
 
 For detailed information on this package, please refer to the [online documentation](https://docs.virtana.com/en/linux-agent.html).
 
 ## Default Collectors
-The following are the collectors that are enabled by default in the Netuitive Agent, and are the ones we assume Netuitive customers will use by default as well.
+The following are the collectors that are enabled by default in the CloudWisdom Agent, and are the ones we assume CloudWisdom customers will use by default as well.
 
  - **CPU** - collects CPU utilization metric using /proc/stat
  - **DiskSpace** - uses /proc/mounts and os.statvfs() to get disk space usage
